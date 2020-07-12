@@ -1,0 +1,16 @@
+{
+  "meals" : [
+    {
+      "name" : "Breakfast"
+    },
+    {
+      "name" : "Lunch & Dinner"
+    },
+    {
+      "name" : "Barista Corner"
+    },
+    {
+      "name" : "Drinks"
+    }
+  ]
+}
