@@ -1,6 +1,7 @@
 package org.githiomi.tokitchen.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -9,6 +10,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import org.githiomi.tokitchen.R;
+import org.githiomi.tokitchen.adapters.SubCategoryAdapter;
 import org.githiomi.tokitchen.models.Constants;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -30,8 +32,10 @@ public class SubCategoryActivity extends AppCompatActivity {
 //    Local Variables
     // The category name passed from main activity
     private String mainCategoryName;
-    // For the su categories
+    // For the sub categories
     private List<String> subCategoryNames;
+    // For the adapter
+    private SubCategoryAdapter subCategoryAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,9 @@ public class SubCategoryActivity extends AppCompatActivity {
         // Getting the category name from the intent
         Intent fromMainActivity = getIntent();
         mainCategoryName = fromMainActivity.getStringExtra(Constants.MAIN_CATEGORY_NAME);
+
+        // Setting the app bar to category name
+        getSupportActionBar().setTitle(mainCategoryName);
 
         // Method to pass the main category to the method to get sub-categories
         getSubCategories(mainCategoryName);
@@ -72,13 +79,24 @@ public class SubCategoryActivity extends AppCompatActivity {
                     JSONArray breakfastCategories = mealCategory.getJSONArray(mealCategoriesKey);
                     int length = breakfastCategories.length();
 
+                    // Initializing the array list
+                    subCategoryNames = new ArrayList();
+
                     for (int d = 0; d < length; d += 1) {
 
-                        JSONObject breakfastCategory = (JSONObject) breakfastCategories.get(d);
-                        String bCategoryName = breakfastCategory.getString("categoryName");
+                        JSONObject mealSubCategories = (JSONObject) breakfastCategories.get(d);
+
+                        String forTheSubCategories = "categoryName";
+                        String bCategoryName = mealSubCategories.getString(forTheSubCategories);
                         Log.d(TAG, mainCategoryName + " categories: " + bCategoryName);
 
+                        // Adding the sub category name to the array list
+                        subCategoryNames.add(bCategoryName);
+
                     }
+
+                    //Passing the sub categories to the adapter
+                    passToAdapter(subCategoryNames);
 
                 }
             }
@@ -86,6 +104,20 @@ public class SubCategoryActivity extends AppCompatActivity {
         } catch (Exception exception) {
             exception.printStackTrace();
         }
+
+    }
+
+    // Method to pass the sub categories to an adapter
+    public void passToAdapter(List<String> subCategoryNames){
+
+        // Init the adapter
+        subCategoryAdapter = new SubCategoryAdapter(subCategoryNames, this);
+
+        wSubCategoryRecyclerView.setAdapter(subCategoryAdapter);
+        wSubCategoryRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        wSubCategoryRecyclerView.setHasFixedSize(true);
+        subCategoryAdapter.notifyDataSetChanged();
 
     }
 }
