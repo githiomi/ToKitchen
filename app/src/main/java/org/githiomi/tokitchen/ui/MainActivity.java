@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 
 import org.githiomi.tokitchen.R;
 import org.githiomi.tokitchen.adapters.MainCategoryAdapter;
+import org.githiomi.tokitchen.models.Constants;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         try {
 //            Locating the file to read the data
-            JSONObject jsonObject = new JSONObject(loadJsonFromAssets());
+            JSONObject jsonObject = new JSONObject(Constants.loadJsonFromAssets(this));
 
 //            The key for the content I want to get
             String key = "java";
@@ -98,30 +99,4 @@ public class MainActivity extends AppCompatActivity {
         mainCategoryAdapter.notifyDataSetChanged();
     }
 
-//    Method that will return data file location
-    public String loadJsonFromAssets(){
-
-        String jsonLocation = null;
-
-        try {
-
-            // Getting the file location
-            String fileName = "source.json";
-            InputStream inputStream = this.getAssets().open(fileName);
-
-            int size = inputStream.available();
-
-            byte[] byteArray = new byte[size];
-            inputStream.read(byteArray);
-
-            inputStream.close();
-
-            jsonLocation = new String(byteArray, "UTF-8");
-
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
-        return jsonLocation;
-    }
 }
