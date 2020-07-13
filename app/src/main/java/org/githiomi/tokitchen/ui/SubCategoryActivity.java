@@ -50,8 +50,42 @@ public class SubCategoryActivity extends AppCompatActivity {
     }
 
 //    Implementation of the method to get the subcategories of the main category
-    public void getSubCategories(String mainCategoryName){
+    public void getSubCategories(String mainCategoryName) {
 
+        try {
+
+//            Locating the file to read the data
+            JSONObject jsonObject = new JSONObject(Constants.loadJsonFromAssets(this));
+
+            String key = "java";
+            JSONArray mealCategories = jsonObject.getJSONArray(key);
+
+            int mealCategoriesCount = mealCategories.length();
+            for (int i = 0; i < mealCategoriesCount; i += 1) {
+
+                JSONObject mealCategory = (JSONObject) mealCategories.get(i);
+                String categoryName = mealCategory.getString("name");
+
+                if (categoryName.equals(mainCategoryName)) {
+
+                    String mealCategoriesKey = "categories";
+                    JSONArray breakfastCategories = mealCategory.getJSONArray(mealCategoriesKey);
+                    int length = breakfastCategories.length();
+
+                    for (int d = 0; d < length; d += 1) {
+
+                        JSONObject breakfastCategory = (JSONObject) breakfastCategories.get(d);
+                        String bCategoryName = breakfastCategory.getString("categoryName");
+                        Log.d(TAG, mainCategoryName + " categories: " + bCategoryName);
+
+                    }
+
+                }
+            }
+
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
 
     }
 }
