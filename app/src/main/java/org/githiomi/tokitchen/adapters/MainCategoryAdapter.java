@@ -1,16 +1,19 @@
 package org.githiomi.tokitchen.adapters;
 
 import android.content.Context;
-import android.util.Log;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.githiomi.tokitchen.R;
+import org.githiomi.tokitchen.models.Constants;
+import org.githiomi.tokitchen.ui.SubCategoryActivity;
 
 import java.util.List;
 
@@ -51,7 +54,8 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
         return mainCategories.size();
     }
 
-    public class MainCategoryViewHolder extends RecyclerView.ViewHolder {
+    public class MainCategoryViewHolder extends RecyclerView.ViewHolder
+                                        implements View.OnClickListener{
 
 //        Widgets
         @BindView(R.id.categoryName) TextView wCategoryName;
@@ -61,10 +65,30 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
 
 //            Binding widget with butter knife
             ButterKnife.bind(this, itemView);
+
+            itemView.setOnClickListener(this);
         }
 
+//        Method that receives the item in the position and binds it to the views
         public void bind(String category){
             wCategoryName.setText(category);
+        }
+
+//        Method to be performed when each item is clicked
+        @Override
+        public void onClick(View view) {
+
+            int itemPosition = getAdapterPosition();
+
+            // Toast for the name
+            String categoryName = mainCategories.get(itemPosition);
+            Toast.makeText(context, categoryName + " category", Toast.LENGTH_SHORT).show();
+
+            // This will take the category name and pass it
+            Intent toSubCategory = new Intent(context, SubCategoryActivity.class);
+            toSubCategory.putExtra(Constants.MAIN_CATEGORY_NAME, categoryName);
+            context.startActivity(toSubCategory);
+
         }
     }
 }
