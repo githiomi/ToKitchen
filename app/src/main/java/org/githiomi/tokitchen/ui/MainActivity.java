@@ -29,9 +29,7 @@ public class MainActivity extends AppCompatActivity {
     public void readJsonFile() {
 
         try {
-
-//            String allContent = new String((Files.readAllBytes(Paths.get(loadJsonFromAssets()))));
-
+//            Locating the file to read the data
             JSONObject jsonObject = new JSONObject(loadJsonFromAssets());
 
 //            The key for the content I want to get
@@ -45,7 +43,22 @@ public class MainActivity extends AppCompatActivity {
                 String categoryName = mealCategory.getString("name");
                 Log.d(TAG, "readJsonFile: One of the categories is: ---------- " + categoryName);
 
+
+                    String mealCategoriesKey = "categories";
+                    JSONArray breakfastCategories = mealCategory.getJSONArray(mealCategoriesKey);
+                    int length = breakfastCategories.length();
+
+                    for ( int d = 0; d < length; d += 1 ){
+
+                        JSONObject breakfastCategory = (JSONObject) breakfastCategories.get(d);
+                        String bCategoryName = breakfastCategory.getString("categoryName");
+                        Log.d(TAG, "Breakfast categories: " + bCategoryName );
+
+                    }
+
+
             }
+
 
 
         } catch (Exception ex){

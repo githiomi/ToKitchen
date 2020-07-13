@@ -1,16 +1,79 @@
 {
   "meals" : [
     {
-      "name" : "Breakfast"
+      "name" : "Breakfast",
+      "categories" : [
+        {
+          "categoryName" : "Health Kick"
+        },
+        {
+          "categoryName" : "Sweet Tooth"
+        },
+        {
+          "categoryName" : "Sumptuous Savoury"
+        },
+        {
+          "categoryName" : "Hearty Breakfast Plates"
+        }
+      ]
     },
     {
-      "name" : "Lunch & Dinner"
+      "name" : "Lunch & Dinner",
+      "categories" : [
+        {
+          "categoryName" : "Salads"
+        },
+        {
+          "categoryName" : "Quick Bites"
+        },
+        {
+          "categoryName" : "Sandwiches"
+        },
+        {
+          "categoryName" : "Wraps"
+        },
+        {
+          "categoryName" : "Burgers"
+        },
+        {
+          "categoryName" : "Signature dishes"
+        }
+      ]
     },
     {
-      "name" : "Barista Corner"
-    },
-    {
-      "name" : "Drinks"
+      "name" : "Barista Corner",
+      "categories" : [
+        {
+          "categoryName" : "Coffee & Espresso"
+        },
+        {
+          "categoryName" : "Tea & Chocolate"
+        },
+        {
+          "categoryName" : "Soda & Water"
+        },
+        {
+          "categoryName" : "Java Shakes"
+        },
+        {
+          "categoryName" : "Super Smoothies"
+        },
+        {
+          "categoryName" : "Iced Tea"
+        },
+        {
+          "categoryName" : "Iced Coffee"
+        },
+        {
+          "categoryName" : "Fresh Juices"
+        },
+        {
+          "categoryName" : "Freshly Squeezed Lemonades"
+        },
+        {
+          "categoryName" : "Coladas"
+        }
+      ]
     }
   ]
 }
