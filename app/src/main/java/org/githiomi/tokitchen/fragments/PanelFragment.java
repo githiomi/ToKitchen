@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import org.githiomi.tokitchen.R;
 import org.githiomi.tokitchen.adapters.MainCategoryAdapter;
@@ -37,7 +39,10 @@ public class PanelFragment extends Fragment {
     private static final String TAG = PanelFragment.class.getSimpleName();
 
 //    Widgets
+    // Recycler view
     @BindView(R.id.panelRecyclerView) RecyclerView panelRecyclerView;
+    // The checkout button
+    @BindView(R.id.cvCheckoutButton) CardView wToCheckoutButton;
 
 //    Local variables
     // For the adapter
@@ -80,6 +85,14 @@ public class PanelFragment extends Fragment {
         // Method to get data from the json file
         readJsonFile();
 
+        // Setting on click listener to the checkout button
+        wToCheckoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "Ready to checkout order", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         return fragmentView;
     }
 
@@ -110,7 +123,7 @@ public class PanelFragment extends Fragment {
                 // To create the main category objects
                 int mainCategoryImage = mainCategoryImages[i];
 
-                // Create a new main category objectt
+                // Create a new main category object
                 mainCategoryList.add( new MainCategory(categoryName, mainCategoryImage) );
 
                 Log.d(TAG, "readJsonFile: One of the categories is: ---------- " + categoryName);
