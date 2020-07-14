@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context=".ui.AltActivity">
+
+    <fragment
+        android:id="@+id/panelFragment"
+        android:name="org.githiomi.tokitchen.fragments.PanelFragment"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        tools:layout="@layout/fragment_panel" />
+
+    <View
+        android:id="@+id/viewSeparator"
+        android:background="#B92F24"
+        android:layout_width="5dp"
+        android:layout_toEndOf="@id/panelFragment"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:id="@+id/mealSelectFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/viewSeparator"
+        android:background="@android:color/white"
+        android:layout_margin="5dp">
+
+    </FrameLayout>
+
+</RelativeLayout>

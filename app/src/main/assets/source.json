@@ -4,16 +4,100 @@
       "name" : "Breakfast",
       "categories" : [
         {
-          "categoryName" : "Health Kick"
+          "categoryName" : "Health Kick",
+          "meals" : [
+            {
+              "mealName" : "Fruit Salad",
+              "description" : "",
+              "price" : 380
+            },
+            {
+              "mealName" : "Fruit Salad",
+              "description" : "With yogurt honey and nuts",
+              "price" : 490
+            },
+            {
+              "mealName" : "Hot Oatmeal Porridge",
+              "description" : "With almonds, raisins & brown sugar",
+              "price" : 440
+            },
+            {
+              "mealName" : "Homemade Granola",
+              "description" : "With milk or yogurt and choice of honey or strawberries",
+              "price" : 500
+            }
+          ]
         },
         {
-          "categoryName" : "Sweet Tooth"
+          "categoryName" : "Sweet Tooth",
+          "meals" : [
+            {
+              "mealName" : "French Toast",
+              "description" : "Single Brioche French Toast",
+              "price" : 230
+            },
+            {
+              "mealName" : "French Toast",
+              "description" : "Brioche French Toast (Classic / Choc Chip / Strawberry Chocolate / Choco Banana)",
+              "price" : 550
+            },
+            {
+              "mealName" : "Pancake",
+              "description" : "Single fluffy homemade pancake with butter & syrup",
+              "price" : 260
+            },
+            {
+              "mealName" : "Pancake",
+              "description" : "Classic",
+              "price" : 550
+            }
+          ]
         },
         {
-          "categoryName" : "Sumptuous Savoury"
+          "categoryName" : "Sumptuous Savoury",
+          "meals" : [
+            {
+              "mealName" : "Open Toast",
+              "description" : "Toast with avocado, cherry tomatoes & balsamic reduction",
+              "price" : 380
+            },
+            {
+              "mealName" : "Breakfast Sandwich",
+              "description" : "Choice of croissant, white or wholemeal bread",
+              "types" : [
+                {
+                  "type" : "Egg & cheese",
+                  "price" : 460
+                },
+                {
+                  "type" : "Egg & cheese with Bacon, Ham or Sausage",
+                  "price" : 600
+                }
+              ]
+            },
+            {
+              "mealName" : "Eggs",
+              "description" : "Just the Way You Like",
+              "types" : [
+
+              ]
+            }
+          ]
         },
         {
-          "categoryName" : "Hearty Breakfast Plates"
+          "categoryName" : "Hearty Breakfast Plates",
+          "meals" : [
+            {
+              "mealName" : "Java Full Breakfast",
+              "description" : "Two eggs with toast, home fries, baked beans & your choice of bacon, ham or sausage",
+              "price" : 740
+            },
+            {
+              "mealName" : "Java Full Breakfast",
+              "description" : "Served with your choice of single house coffee, tea or small glass of fresh juice",
+              "price" : 820
+            }
+          ]
         }
       ]
     },
@@ -41,14 +125,19 @@
       ]
     },
     {
-      "name" : "Barista Corner",
+      "name": "Barista Corner",
+      "categories": [
+        {
+          "categoryName": "Coffee & Espresso"
+        },
+        {
+          "categoryName": "Tea & Chocolate"
+        }
+      ]
+    },
+    {
+      "name" : "Drinks",
       "categories" : [
-        {
-          "categoryName" : "Coffee & Espresso"
-        },
-        {
-          "categoryName" : "Tea & Chocolate"
-        },
         {
           "categoryName" : "Soda & Water"
         },
