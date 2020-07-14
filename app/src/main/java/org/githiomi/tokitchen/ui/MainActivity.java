@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
     public void passToAdapter(List<String> categoryNames){
         Log.d(TAG, "passToAdapter: init");
 
-        mainCategoryAdapter = new MainCategoryAdapter(categoryNames, this);
+//        mainCategoryAdapter = new MainCategoryAdapter(categoryNames, this);
 
         wRecyclerView.setAdapter(mainCategoryAdapter);
         wRecyclerView.setLayoutManager(new LinearLayoutManager(this));

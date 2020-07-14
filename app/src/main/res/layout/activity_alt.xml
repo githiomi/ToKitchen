@@ -10,7 +10,7 @@
     <fragment
         android:id="@+id/panelFragment"
         android:name="org.githiomi.tokitchen.fragments.PanelFragment"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="match_parent"
         android:layout_margin="5dp"
         tools:layout="@layout/fragment_panel" />
@@ -28,8 +28,6 @@
         android:layout_height="match_parent"
         android:layout_toEndOf="@id/viewSeparator"
         android:background="@android:color/white"
-        android:layout_margin="5dp">
-
-    </FrameLayout>
+        android:layout_margin="5dp" />
 
 </RelativeLayout>
