@@ -24,17 +24,17 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:layout_margin="5dp"
-            android:padding="3dp"
-            android:layout_gravity="bottom">
+            android:padding="3dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvCategoryName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_marginRight="60dp"
                 android:layout_margin="10dp"
+                android:layout_marginRight="60dp"
                 android:elevation="30dp"
                 android:padding="5dp"
                 app:cardCornerRadius="30dp">
@@ -44,8 +44,8 @@
                     style="@style/TextAppearance.AppCompat.Large"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Lunch &amp; Dinner"
                     android:padding="10dp"
+                    android:text="Lunch &amp; Dinner"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textStyle="bold" />
@@ -56,18 +56,18 @@
                 android:id="@+id/mainCategoryArrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:layout_alignParentRight="true"
-                android:padding="5dp"
+                android:layout_margin="10dp"
                 android:elevation="30dp"
-                app:cardCornerRadius="30dp" >
+                android:padding="5dp"
+                app:cardCornerRadius="30dp">
 
                 <ImageView
-                    android:padding="10dp"
                     android:id="@+id/arrowImage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:padding="10dp"
                     android:src="@drawable/ic_arrow_down" />
 
             </androidx.cardview.widget.CardView>

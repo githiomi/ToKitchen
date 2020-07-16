@@ -84,6 +84,13 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
 
             wCategoryName.setText(mainCategory.getMainCategoryName());
 
+            boolean isExpanded = mainCategory.isExpanded();
+
+            if (isExpanded) {
+                dropDown();
+            } else {
+                backUp();
+            }
 
             // The adapter for the sub categories
             subCategoryAdapter = new SubCategoryAdapter(mainCategory.getSubCategoryNames(), context);
@@ -102,13 +109,28 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
 
             int itemPosition = getAdapterPosition();
 
-            // Toast for the name
+            // To change the is expanded property
             MainCategory mainCategoryItem = mainCategories.get(itemPosition);
+            mainCategoryItem.setExpanded( !(mainCategoryItem.isExpanded()) );
+            notifyItemChanged(itemPosition);
 
-            wArrowImage.setImageResource(R.drawable.ic_arrow_up);
+            // Toast for the name
             Toast.makeText(context, mainCategoryItem.getMainCategoryName() + " category", Toast.LENGTH_SHORT).show();
 
 
+        }
+
+        // Methods to hide and show views
+        public void dropDown() {
+            // To show
+            wArrowImage.setImageResource(R.drawable.ic_arrow_up);
+            wSubCategoryRecyclerView.setVisibility(View.VISIBLE);
+        }
+
+        public void backUp() {
+            // To hide
+            wArrowImage.setImageResource(R.drawable.ic_arrow_down);
+            wSubCategoryRecyclerView.setVisibility(View.GONE);
         }
     }
 }

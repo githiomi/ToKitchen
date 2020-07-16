@@ -60,7 +60,7 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
             super(itemView);
 
             // Binding views with butter knife
-            ButterKnife.bind(this, itemView);
+            ButterKnife.bind(this, itemView );
         }
 
         public void bind(String subCategoryName){
