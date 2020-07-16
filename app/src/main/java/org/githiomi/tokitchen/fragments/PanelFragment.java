@@ -124,7 +124,8 @@ public class PanelFragment extends Fragment {
                 int mainCategoryImage = mainCategoryImages[i];
 
                 // Create a new main category object
-                mainCategoryList.add( new MainCategory(categoryName, mainCategoryImage) );
+                List<String> subCategories = new ArrayList<>();
+                mainCategoryList.add( new MainCategory(categoryName, subCategories, mainCategoryImage) );
 
                 Log.d(TAG, "readJsonFile: One of the categories is: ---------- " + categoryName);
 
