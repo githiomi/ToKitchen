@@ -91,12 +91,13 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
 
             // Toast for the name
             MainCategory mainCategoryItem = mainCategories.get(itemPosition);
+
             Toast.makeText(context, mainCategoryItem.getMainCategoryName() + " category", Toast.LENGTH_SHORT).show();
 
             // This will take the category name and pass it
-            Intent toSubCategory = new Intent(context, SubCategoryActivity.class);
-            toSubCategory.putExtra(Constants.MAIN_CATEGORY_NAME,mainCategoryItem.getMainCategoryName());
-            context.startActivity(toSubCategory);
+//            Intent toSubCategory = new Intent(context, SubCategoryActivity.class);
+//            toSubCategory.putExtra(Constants.MAIN_CATEGORY_NAME,mainCategoryItem.getMainCategoryName());
+//            context.startActivity(toSubCategory);
 
         }
     }

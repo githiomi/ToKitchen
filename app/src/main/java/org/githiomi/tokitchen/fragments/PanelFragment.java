@@ -51,6 +51,8 @@ public class PanelFragment extends Fragment {
     private List<String> categoryNames;
     // For the list of main category objects
     private List<MainCategory> mainCategoryList;
+    // For the list of sub categories
+    private List<String> subCategoryList;
     // For the images
     private int[] mainCategoryImages = {R.drawable.breakfast, R.drawable.lunchanddinner, R.drawable.barista, R.drawable.drinks};
 
@@ -113,30 +115,53 @@ public class PanelFragment extends Fragment {
             categoryNames = new ArrayList();
             mainCategoryList = new ArrayList<>();
 
-            for ( int i = 0; i < mealCategoriesCount; i += 1 ){
+            for ( int i = 0; i < mealCategoriesCount; i += 1 ) {
 
                 JSONObject mealCategory = (JSONObject) mealCategories.get(i);
                 String categoryName = mealCategory.getString("name");
 
                 categoryNames.add(categoryName);
 
-                // To create the main category objects
-                int mainCategoryImage = mainCategoryImages[i];
+                if (categoryName.equals("Breakfast")) {
 
-                // Create a new main category object
-                List<String> subCategories = new ArrayList<>();
-                mainCategoryList.add( new MainCategory(categoryName, subCategories, mainCategoryImage) );
+                    String mealCategoriesKey = "categories";
+                    JSONArray breakfastCategories = mealCategory.getJSONArray(mealCategoriesKey);
+                    int length = breakfastCategories.length();
 
-                Log.d(TAG, "readJsonFile: One of the categories is: ---------- " + categoryName);
+                    // Initializing the array list
+                    subCategoryList = new ArrayList();
+
+                    for (int d = 0; d < length; d += 1) {
+
+                        JSONObject mealSubCategories = (JSONObject) breakfastCategories.get(d);
+
+                        String forTheSubCategories = "categoryName";
+                        String bCategoryName = mealSubCategories.getString(forTheSubCategories);
+                        Log.d(TAG, categoryName + " categories: " + bCategoryName);
+
+                        // Adding the sub category name to the array list
+                        subCategoryList.add(bCategoryName);
+
+                    }
+
+
+                    // To create the main category objects
+                    int mainCategoryImage = mainCategoryImages[i];
+
+                    MainCategory mainCategoryItem = new MainCategory(categoryName, subCategoryList, mainCategoryImage);
+                    mainCategoryList.add(mainCategoryItem);
+
+                    Log.d(TAG, "readJsonFile: One of the categories is: ---------- " + categoryName);
+
+                }
+
+                // Method to pass the meals to the adapter
+                Log.d(TAG, "readJsonFile: The array passed to the adapter is: --------- " + categoryNames);
+                passToAdapter(mainCategoryList);
 
             }
-
-            // Method to pass the meals to the adapter
-            Log.d(TAG, "readJsonFile: The array passed to the adapter is: --------- " + categoryNames );
-            passToAdapter(mainCategoryList);
-
-
-        } catch (Exception ex){
+        }
+        catch (Exception ex){
             ex.printStackTrace();
         }
 
