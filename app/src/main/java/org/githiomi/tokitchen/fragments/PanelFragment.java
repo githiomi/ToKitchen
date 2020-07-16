@@ -122,8 +122,6 @@ public class PanelFragment extends Fragment {
 
                 categoryNames.add(categoryName);
 
-                if (categoryName.equals("Breakfast")) {
-
                     String mealCategoriesKey = "categories";
                     JSONArray breakfastCategories = mealCategory.getJSONArray(mealCategoriesKey);
                     int length = breakfastCategories.length();
@@ -153,10 +151,9 @@ public class PanelFragment extends Fragment {
 
                     Log.d(TAG, "readJsonFile: One of the categories is: ---------- " + categoryName);
 
-                }
 
                 // Method to pass the meals to the adapter
-                Log.d(TAG, "readJsonFile: The array passed to the adapter is: --------- " + categoryNames);
+                Log.d(TAG, "readJsonFile: The array passed to the adapter is: --------- " + mainCategoryList);
                 passToAdapter(mainCategoryList);
 
             }

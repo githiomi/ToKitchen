@@ -1,7 +1,6 @@
 package org.githiomi.tokitchen.adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,14 +9,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
 import org.githiomi.tokitchen.R;
-import org.githiomi.tokitchen.models.Constants;
 import org.githiomi.tokitchen.models.MainCategory;
-import org.githiomi.tokitchen.ui.SubCategoryActivity;
 
 import java.util.List;
 
@@ -34,6 +32,8 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
     private List<MainCategory> mainCategories;
     // Context
     private Context context;
+    // For the sub category adapter
+    private SubCategoryAdapter subCategoryAdapter;
 
     public MainCategoryAdapter(List<MainCategory> mainCategories, Context context) {
         this.mainCategories = mainCategories;
@@ -64,6 +64,8 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
 //        Widgets
         @BindView(R.id.tvMainCategory) TextView wCategoryName;
         @BindView(R.id.ivMainCategory) ImageView wCategoryImage;
+        @BindView(R.id.arrowImage) ImageView wArrowImage;
+        @BindView(R.id.subCategoryRecyclerView) RecyclerView wSubCategoryRecyclerView;
 
         public MainCategoryViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -81,6 +83,17 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
                     .into(wCategoryImage);
 
             wCategoryName.setText(mainCategory.getMainCategoryName());
+
+
+            // The adapter for the sub categories
+            subCategoryAdapter = new SubCategoryAdapter(mainCategory.getSubCategoryNames(), context);
+
+            wSubCategoryRecyclerView.setAdapter(subCategoryAdapter);
+            wSubCategoryRecyclerView.setLayoutManager(new LinearLayoutManager(context));
+
+            wSubCategoryRecyclerView.setHasFixedSize(true);
+            subCategoryAdapter.notifyDataSetChanged();
+
         }
 
 //        Method to be performed when each item is clicked
@@ -92,12 +105,9 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
             // Toast for the name
             MainCategory mainCategoryItem = mainCategories.get(itemPosition);
 
+            wArrowImage.setImageResource(R.drawable.ic_arrow_up);
             Toast.makeText(context, mainCategoryItem.getMainCategoryName() + " category", Toast.LENGTH_SHORT).show();
 
-            // This will take the category name and pass it
-//            Intent toSubCategory = new Intent(context, SubCategoryActivity.class);
-//            toSubCategory.putExtra(Constants.MAIN_CATEGORY_NAME,mainCategoryItem.getMainCategoryName());
-//            context.startActivity(toSubCategory);
 
         }
     }
