@@ -128,7 +128,230 @@
       "name": "Barista Corner",
       "categories": [
         {
-          "categoryName": "Coffee & Espresso"
+          "categoryName": "Coffee & Espresso",
+          "meals" : [
+            {
+              "mealName" : "House Coffee",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 170
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 210
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 240
+                }
+              ]
+            },
+            {
+              "mealName" : "Espresso",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 170
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 210
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 240
+                }
+              ]
+            },
+            {
+              "mealName" : "Macchiato",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 180
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 220
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 250
+                }
+              ]
+            },
+            {
+              "mealName" : "Americano",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 180
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 230
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 270
+                }
+              ]
+            },
+            {
+              "mealName" : "Café au Lait",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 180
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 230
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 270
+                }
+              ]
+            },
+            {
+              "mealName" : "Cappuccino",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 230
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 280
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 320
+                }
+              ]
+            },
+            {
+              "mealName" : "Caffé Latte",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 250
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 300
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 320
+                }
+              ]
+            },
+            {
+              "mealName" : "Vanilla Latte",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 270
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 330
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 370
+                }
+              ]
+            },
+            {
+              "mealName" : "Mocha",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 270
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 330
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 370
+                }
+              ]
+            },
+            {
+              "mealName" : "Peppermint Mocha",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 270
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 330
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 370
+                }
+              ]
+            },
+            {
+              "mealName" : "White Chocolate Mocha",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 270
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 330
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 370
+                }
+              ]
+            },
+            {
+              "mealName" : "Malindi Macchiato",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 270
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 330
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 370
+                }
+              ]
+            },
+            {
+              "mealName" : "Caramel Macchiato",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 270
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 330
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 370
+                }
+              ]
+            }
+          ]
         },
         {
           "categoryName": "Tea & Chocolate"

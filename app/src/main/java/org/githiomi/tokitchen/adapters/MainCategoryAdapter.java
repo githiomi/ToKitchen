@@ -1,6 +1,8 @@
 package org.githiomi.tokitchen.adapters;
 
 import android.content.Context;
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -84,14 +86,6 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
 
             wCategoryName.setText(mainCategory.getMainCategoryName());
 
-            boolean isExpanded = mainCategory.isExpanded();
-
-            if (isExpanded) {
-                dropDown();
-            } else {
-                backUp();
-            }
-
             // The adapter for the sub categories
             subCategoryAdapter = new SubCategoryAdapter(mainCategory.getSubCategoryNames(), context);
 
@@ -101,6 +95,14 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
             wSubCategoryRecyclerView.setHasFixedSize(true);
             subCategoryAdapter.notifyDataSetChanged();
 
+            // To customize display depending on the state of isExpanded()
+            boolean isExpanded = mainCategory.isExpanded();
+
+            if (isExpanded) {
+                dropDown();
+            } else {
+                backUp();
+            }
         }
 
 //        Method to be performed when each item is clicked
@@ -114,21 +116,19 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
             mainCategoryItem.setExpanded( !(mainCategoryItem.isExpanded()) );
             notifyItemChanged(itemPosition);
 
-            // Toast for the name
-            Toast.makeText(context, mainCategoryItem.getMainCategoryName() + " category", Toast.LENGTH_SHORT).show();
-
-
         }
 
         // Methods to hide and show views
         public void dropDown() {
             // To show
+            TransitionManager.beginDelayedTransition(wSubCategoryRecyclerView, new AutoTransition());
             wArrowImage.setImageResource(R.drawable.ic_arrow_up);
             wSubCategoryRecyclerView.setVisibility(View.VISIBLE);
         }
 
         public void backUp() {
             // To hide
+            TransitionManager.beginDelayedTransition(wSubCategoryRecyclerView, new AutoTransition());
             wArrowImage.setImageResource(R.drawable.ic_arrow_down);
             wSubCategoryRecyclerView.setVisibility(View.GONE);
         }

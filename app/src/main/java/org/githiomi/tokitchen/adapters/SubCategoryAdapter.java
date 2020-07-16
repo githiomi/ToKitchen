@@ -35,7 +35,7 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
     @NonNull
     @Override
     public SubCategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View mainView = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_category_item, parent, false);
+        View mainView = LayoutInflater.from(parent.getContext()).inflate(R.layout.sub_category_item, parent, false);
         SubCategoryViewHolder subCategoryViewHolder = new SubCategoryViewHolder(mainView);
         return subCategoryViewHolder;
     }
@@ -50,7 +50,8 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
         return subCategoryNames.size();
     }
 
-    public class SubCategoryViewHolder extends RecyclerView.ViewHolder {
+    public class SubCategoryViewHolder extends RecyclerView.ViewHolder
+                                       implements View.OnClickListener{
 
 //        Variables
         // Widgets
@@ -61,10 +62,22 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
 
             // Binding views with butter knife
             ButterKnife.bind(this, itemView );
+
+            // Setting an on click listener
+            itemView.setOnClickListener(this);
         }
 
         public void bind(String subCategoryName){
             wSubCategoryName.setText(subCategoryName);
+        }
+
+        @Override
+        public void onClick(View view) {
+
+                int currentItem = getAdapterPosition();
+
+                
+
         }
     }
 }
