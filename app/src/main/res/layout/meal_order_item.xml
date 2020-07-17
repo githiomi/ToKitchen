@@ -53,23 +53,25 @@
 
                         <RelativeLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" >
+                            android:layout_height="wrap_content">
 
                             <TextView
                                 android:id="@+id/txtSize"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
                                 android:layout_marginLeft="15sp"
                                 android:padding="5dp"
                                 android:text="Sizes:"
                                 android:textSize="25sp"
-                                android:layout_alignParentLeft="true"
                                 android:textStyle="bold" />
 
                             <Spinner
                                 android:id="@+id/spinnerSizeDropDown"
                                 android:layout_width="350dp"
                                 android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
                                 android:layout_toRightOf="@id/txtSize"
                                 android:padding="5dp" />
 
@@ -77,22 +79,26 @@
                                 android:id="@+id/ivButtonAddEspresso"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimary"
-                                android:clickable="true"
+                                android:layout_centerVertical="true"
                                 android:layout_margin="5dp"
                                 android:layout_toRightOf="@id/spinnerSizeDropDown"
+                                android:background="@color/colorPrimary"
+                                android:clickable="true"
+                                android:padding="8dp"
                                 android:src="@drawable/ic_add" />
 
                             <ImageView
                                 android:id="@+id/ivButtonAddSyrup"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimary"
+                                android:layout_centerVertical="true"
                                 android:layout_margin="5dp"
                                 android:layout_toRightOf="@id/ivButtonAddEspresso"
+                                android:background="@color/colorPrimary"
                                 android:clickable="true"
-                                android:src="@drawable/ic_add"
-                                android:contentDescription="TODO" />
+                                android:contentDescription="TODO"
+                                android:padding="8dp"
+                                android:src="@drawable/ic_add" />
 
                         </RelativeLayout>
 
@@ -107,9 +113,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
                 android:layout_margin="5dp"
                 android:elevation="20dp"
-                android:layout_centerInParent="true"
                 android:padding="10dp"
                 app:cardBackgroundColor="@android:color/black"
                 app:cardCornerRadius="30dp">
@@ -119,6 +125,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:clickable="true"
+                    android:padding="8dp"
                     android:src="@drawable/ic_add" />
 
             </androidx.cardview.widget.CardView>

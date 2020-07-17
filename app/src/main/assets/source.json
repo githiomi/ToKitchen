@@ -354,7 +354,122 @@
           ]
         },
         {
-          "categoryName": "Tea & Chocolate"
+          "categoryName": "Tea & Chocolate",
+          "meals" : [
+            {
+              "mealName" : "Regular / Masala Tea",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 170
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 210
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 240
+                }
+              ]
+            },
+            {
+              "mealName" : "Green / Herbal Tea",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 170
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 210
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 240
+                }
+              ]
+            },
+            {
+              "mealName" : "Malindi Chai Latte",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 260
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 310
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 340
+                }
+              ]
+            },
+            {
+              "mealName" : "Hot Chocolate",
+              "sizes" : [
+                {
+                  "sizeName" : "Single",
+                  "sizePrice" : 220
+                },
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 280
+                },
+                {
+                  "sizeName" : "Triple",
+                  "sizePrice" : 320
+                }
+              ]
+            },
+            {
+              "mealName" : "Java Dawa",
+              "sizes" : [
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 220
+                }
+              ]
+            },
+            {
+              "mealName" : "Tea Pot",
+              "sizes" : [
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 280
+                }
+              ]
+            },
+            {
+              "mealName" : "Green Tea Pot",
+              "sizes" : [
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 280
+                }
+              ]
+            },
+            {
+              "mealName" : "Moroccan Tea Pot",
+              "sizes" : [
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 280
+                }
+              ]
+            },
+            {
+              "mealName" : "Herbal Tea Pot",
+              "sizes" : [
+                {
+                  "sizeName" : "Double",
+                  "sizePrice" : 280
+                }
+              ]
+            }
+          ]
         }
       ]
     },
