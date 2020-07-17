@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.githiomi.tokitchen.R;
+import org.githiomi.tokitchen.fragments.ImageHolderFragment;
 import org.githiomi.tokitchen.fragments.MealOrderFragment;
 import org.githiomi.tokitchen.models.Barista.BaristaCategory;
 
@@ -90,6 +91,14 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
                 MealOrderFragment mealOrderFragment = MealOrderFragment.newInstance();
                 FragmentTransaction ft = ((FragmentActivity) context).getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.mealSelectFragment, mealOrderFragment);
+                ft.commit();
+
+            }
+            else {
+
+                ImageHolderFragment imageHolderFragment = ImageHolderFragment.newInstance();
+                FragmentTransaction ft = ((FragmentActivity) context).getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.mealSelectFragment, imageHolderFragment);
                 ft.commit();
 
             }
