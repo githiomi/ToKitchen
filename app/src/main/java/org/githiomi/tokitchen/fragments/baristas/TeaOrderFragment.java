@@ -37,7 +37,7 @@ public class TeaOrderFragment extends Fragment {
     @BindView(R.id.teaRecyclerView)
     RecyclerView wTeaRecyclerView;
 
-    //    Local Variables
+//    Local Variables
     // For the adapter
     private BaristaTypeAdapter baristaTypeAdapter;
     // For the main categories
