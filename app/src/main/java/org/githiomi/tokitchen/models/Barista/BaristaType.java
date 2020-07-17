@@ -1,7 +1,10 @@
 package org.githiomi.tokitchen.models.Barista;
 
+import org.parceler.Parcel;
+
 import java.util.List;
 
+@Parcel
 public class BaristaType {
 
     // This is the class that will hold the type of coffee / tea and a class for its sizes
@@ -9,6 +12,9 @@ public class BaristaType {
     private String baristaType;
     private List<BaristaSizes> baristaSizesList;
     private Boolean isExpanded;
+
+    public BaristaType() {
+    }
 
     public BaristaType(String baristaType, List<BaristaSizes> baristaSizesList) {
         this.baristaType = baristaType;

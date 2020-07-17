@@ -1,11 +1,17 @@
 package org.githiomi.tokitchen.models.Barista;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class BaristaSizes {
 
     // This is the class that will hold the 3 sizes of the barista drinks
 
     private String baristaSize;
     private int baristaPrice;
+
+    public BaristaSizes() {
+    }
 
     public BaristaSizes(String baristaSize, int baristaPrice) {
         this.baristaSize = baristaSize;
