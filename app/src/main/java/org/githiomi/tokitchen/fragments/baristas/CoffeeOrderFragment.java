@@ -28,11 +28,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CoffeeOrderFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class CoffeeOrderFragment extends Fragment {
 
 //    TAG
@@ -40,7 +35,7 @@ public class CoffeeOrderFragment extends Fragment {
 
 //    Widgets
     // Recycler View
-    @BindView(R.id.coffeeRecyclerView) RecyclerView wMealsRecyclerView;
+    @BindView(R.id.coffeeRecyclerView) RecyclerView wCoffeeRecyclerView;
 
 //    Local variables
     // For the adapter
@@ -207,10 +202,10 @@ public class CoffeeOrderFragment extends Fragment {
 
         baristaTypeAdapter = new BaristaTypeAdapter(baristaTypeListForAdapter, context);
 
-        wMealsRecyclerView.setAdapter(baristaTypeAdapter);
-        wMealsRecyclerView.setLayoutManager(new LinearLayoutManager(context));
+        wCoffeeRecyclerView.setAdapter(baristaTypeAdapter);
+        wCoffeeRecyclerView.setLayoutManager(new LinearLayoutManager(context));
 
-        wMealsRecyclerView.setHasFixedSize(true);
+        wCoffeeRecyclerView.setHasFixedSize(true);
         baristaTypeAdapter.notifyDataSetChanged();
 
     }

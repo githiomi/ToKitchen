@@ -6,7 +6,7 @@
     tools:context=".fragments.baristas.TeaOrderFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/TeaRecyclerView"
+        android:id="@+id/teaRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/white"
