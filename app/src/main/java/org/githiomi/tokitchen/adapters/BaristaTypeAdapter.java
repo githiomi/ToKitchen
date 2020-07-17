@@ -4,10 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -96,7 +94,8 @@ public class BaristaTypeAdapter extends RecyclerView.Adapter<BaristaTypeAdapter.
 
             if ( view == wButtonAddOrder ){
 
-                Toast.makeText(context, "Order: " + baristaTypeList.get(currentPosition).getBaristaType(), Toast.LENGTH_SHORT).show();
+                String baristaTypeName = baristaTypeList.get(currentPosition).getBaristaType();
+                Toast.makeText(context, "Order: " + baristaTypeName, Toast.LENGTH_SHORT).show();
 
             }
 

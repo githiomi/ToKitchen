@@ -13,9 +13,9 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.githiomi.tokitchen.R;
+import org.githiomi.tokitchen.fragments.baristas.CoffeeOrderFragment;
 import org.githiomi.tokitchen.fragments.ImageHolderFragment;
-import org.githiomi.tokitchen.fragments.MealOrderFragment;
-import org.githiomi.tokitchen.models.Barista.BaristaCategory;
+import org.githiomi.tokitchen.fragments.baristas.TeaOrderFragment;
 
 import java.util.List;
 
@@ -79,18 +79,24 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
 
         @Override
         public void onClick(View view) {
-
-                int currentItem = getAdapterPosition();
-
+            int currentItem = getAdapterPosition();
 
             String currentSubCategory = subCategoryNames.get(currentItem);
             Toast.makeText(context, currentSubCategory, Toast.LENGTH_SHORT).show();
 
             if ( currentSubCategory.equals("Coffee & Espresso") ){
 
-                MealOrderFragment mealOrderFragment = MealOrderFragment.newInstance();
+                CoffeeOrderFragment coffeeOrderFragment = CoffeeOrderFragment.newInstance();
                 FragmentTransaction ft = ((FragmentActivity) context).getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.mealSelectFragment, mealOrderFragment);
+                ft.replace(R.id.mealSelectFragment, coffeeOrderFragment);
+                ft.commit();
+
+            }
+            else if ( currentSubCategory.equals("Tea & Chocolate") ){
+
+                TeaOrderFragment teaOrderFragment = TeaOrderFragment.newInstance();
+                FragmentTransaction ft = ((FragmentActivity) context).getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.mealSelectFragment, teaOrderFragment);
                 ft.commit();
 
             }

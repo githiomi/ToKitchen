@@ -1,4 +1,4 @@
-package org.githiomi.tokitchen.fragments;
+package org.githiomi.tokitchen.fragments.baristas;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -14,7 +14,6 @@ import android.view.ViewGroup;
 
 import org.githiomi.tokitchen.R;
 import org.githiomi.tokitchen.adapters.BaristaTypeAdapter;
-import org.githiomi.tokitchen.adapters.MainCategoryAdapter;
 import org.githiomi.tokitchen.models.Barista.BaristaCategory;
 import org.githiomi.tokitchen.models.Barista.BaristaSizes;
 import org.githiomi.tokitchen.models.Barista.BaristaType;
@@ -31,17 +30,17 @@ import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MealOrderFragment#newInstance} factory method to
+ * Use the {@link CoffeeOrderFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MealOrderFragment extends Fragment {
+public class CoffeeOrderFragment extends Fragment {
 
 //    TAG
-    private static final String TAG = MealOrderFragment.class.getSimpleName();
+    private static final String TAG = CoffeeOrderFragment.class.getSimpleName();
 
 //    Widgets
     // Recycler View
-    @BindView(R.id.mealsRecyclerView) RecyclerView wMealsRecyclerView;
+    @BindView(R.id.coffeeRecyclerView) RecyclerView wMealsRecyclerView;
 
 //    Local variables
     // For the adapter
@@ -59,12 +58,12 @@ public class MealOrderFragment extends Fragment {
     // For the list of barista sizes and prices
     private List<BaristaSizes> baristaSizesList;
 
-    public MealOrderFragment() {
+    public CoffeeOrderFragment() {
         // Required empty public constructor
     }
 
-    public static MealOrderFragment newInstance() {
-        MealOrderFragment fragment = new MealOrderFragment();
+    public static CoffeeOrderFragment newInstance() {
+        CoffeeOrderFragment fragment = new CoffeeOrderFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -81,7 +80,7 @@ public class MealOrderFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View mainView = inflater.inflate(R.layout.fragment_meal_order, container, false);
+        View mainView = inflater.inflate(R.layout.fragment_coffee_order, container, false);
 
         // Binding using butter knife
         ButterKnife.bind(this, mainView);
