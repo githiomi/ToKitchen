@@ -8,9 +8,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.githiomi.tokitchen.R;
+import org.githiomi.tokitchen.fragments.MealOrderFragment;
 import org.githiomi.tokitchen.models.Barista.BaristaCategory;
 
 import java.util.List;
@@ -84,7 +87,10 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
 
             if ( currentSubCategory.equals("Coffee & Espresso") ){
 
-
+                MealOrderFragment mealOrderFragment = MealOrderFragment.newInstance();
+                FragmentTransaction ft = ((FragmentActivity) context).getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.mealSelectFragment, mealOrderFragment);
+                ft.commit();
 
             }
 
