@@ -34,5 +34,8 @@ public class BaristaSizes {
         this.baristaPrice = baristaPrice;
     }
 
-
+    @Override
+    public String toString() {
+        return "Ksh. " + getBaristaPrice();
+    }
 }

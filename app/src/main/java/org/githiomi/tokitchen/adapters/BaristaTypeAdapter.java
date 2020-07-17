@@ -4,7 +4,10 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.githiomi.tokitchen.R;
+import org.githiomi.tokitchen.models.Barista.BaristaSizes;
 import org.githiomi.tokitchen.models.Barista.BaristaType;
 
 import java.util.List;
@@ -59,6 +63,7 @@ public class BaristaTypeAdapter extends RecyclerView.Adapter<BaristaTypeAdapter.
         // Widgets
         @BindView(R.id.mealName) TextView wMealName;
         @BindView(R.id.ivButtonAddOrder) ImageView wButtonAddOrder;
+        @BindView(R.id.spinnerSizeDropDown) Spinner wSizeSpinner;
 
         public BaristaTypeViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -74,6 +79,12 @@ public class BaristaTypeAdapter extends RecyclerView.Adapter<BaristaTypeAdapter.
         public void bindBaristaType(BaristaType baristaType){
 
             wMealName.setText(baristaType.getBaristaType());
+
+            List<BaristaSizes> itemBaristaSizes = baristaType.getBaristaSizesList();
+
+            //Passing the list of sizes to the custom adapter
+            SpinnerDropDownAdapter spinnerDropDownAdapter = new SpinnerDropDownAdapter(context, itemBaristaSizes);
+            wSizeSpinner.setAdapter(spinnerDropDownAdapter);
 
         }
 
