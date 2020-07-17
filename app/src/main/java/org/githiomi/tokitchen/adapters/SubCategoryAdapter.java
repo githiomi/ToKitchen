@@ -5,11 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.githiomi.tokitchen.R;
+import org.githiomi.tokitchen.models.Barista.BaristaCategory;
 
 import java.util.List;
 
@@ -76,7 +78,15 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
 
                 int currentItem = getAdapterPosition();
 
-                
+
+            String currentSubCategory = subCategoryNames.get(currentItem);
+            Toast.makeText(context, currentSubCategory, Toast.LENGTH_SHORT).show();
+
+            if ( currentSubCategory.equals("Coffee & Espresso") ){
+
+
+
+            }
 
         }
     }

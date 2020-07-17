@@ -6,22 +6,22 @@ public class BaristaType {
 
     // This is the class that will hold the type of coffee / tea and a class for its sizes
 
-    private String barista;
+    private String baristaType;
     private List<BaristaSizes> baristaSizesList;
     private Boolean isExpanded;
 
-    public BaristaType(String barista, List<BaristaSizes> baristaSizesList, Boolean isExpanded) {
-        this.barista = barista;
+    public BaristaType(String baristaType, List<BaristaSizes> baristaSizesList) {
+        this.baristaType = baristaType;
         this.baristaSizesList = baristaSizesList;
         this.isExpanded = isExpanded;
     }
 
-    public String getBarista() {
-        return barista;
+    public String getBaristaType() {
+        return baristaType;
     }
 
-    public void setBarista(String barista) {
-        this.barista = barista;
+    public void setBaristaType(String barista) {
+        this.baristaType = barista;
     }
 
     public List<BaristaSizes> getBaristaSizesList() {

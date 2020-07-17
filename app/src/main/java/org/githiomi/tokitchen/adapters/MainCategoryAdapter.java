@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 
 import org.githiomi.tokitchen.R;
+import org.githiomi.tokitchen.models.Barista.BaristaCategory;
 import org.githiomi.tokitchen.models.MainCategory;
 
 import java.util.List;
