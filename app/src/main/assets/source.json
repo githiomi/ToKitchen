@@ -607,11 +607,130 @@
         },
         {
           "categoryName" : "Fresh Juices",
-          "meals" : []
+          "meals" : [
+            {
+              "mealName" : "Minty Pineade",
+              "sizes" : [
+                {
+                  "sizeName" : "Small",
+                  "sizePrice" : 230
+                },
+                {
+                  "sizeName" : "Large",
+                  "sizePrice" : 300
+                }
+              ]
+            },
+            {
+              "mealName" : "Pineapple",
+              "sizes" : [
+                {
+                  "sizeName" : "Small",
+                  "sizePrice" : 240
+                },
+                {
+                  "sizeName" : "Large",
+                  "sizePrice" : 310
+                }
+              ]
+            },
+            {
+              "mealName" : "Orange",
+              "sizes" : [
+                {
+                  "sizeName" : "Small",
+                  "sizePrice" : 240
+                },
+                {
+                  "sizeName" : "Large",
+                  "sizePrice" : 310
+                }
+              ]
+            },
+            {
+              "mealName" : "Mango",
+              "sizes" : [
+                {
+                  "sizeName" : "Small",
+                  "sizePrice" : 240
+                },
+                {
+                  "sizeName" : "Large",
+                  "sizePrice" : 310
+                }
+              ]
+            },
+            {
+              "mealName" : "Passion",
+              "sizes" : [
+                {
+                  "sizeName" : "Small",
+                  "sizePrice" : 240
+                },
+                {
+                  "sizeName" : "Large",
+                  "sizePrice" : 310
+                }
+              ]
+            },
+            {
+              "mealName" : "Tropical Mix",
+              "sizes" : [
+                {
+                  "sizeName" : "Small",
+                  "sizePrice" : 240
+                },
+                {
+                  "sizeName" : "Large",
+                  "sizePrice" : 310
+                }
+              ]
+            },
+            {
+              "mealName" : "Beetroot Punch",
+              "sizes" : [
+                {
+                  "sizeName" : "Small",
+                  "sizePrice" : 240
+                },
+                {
+                  "sizeName" : "Large",
+                  "sizePrice" : 310
+                }
+              ]
+            }
+          ]
         },
         {
           "categoryName" : "Freshly Squeezed Lemonades",
-          "meals" : []
+          "meals" : [
+            {
+              "mealName" : "Classic*",
+              "sizes" : [
+                {
+                  "sizeName" : "Small",
+                  "sizePrice" : 210
+                },
+                {
+                  "sizeName" : "Large",
+                  "sizePrice" : 280
+                }
+              ]
+            },
+            {
+              "mealName" : "Strawberry Lemonade",
+              "sizes" : [
+                {
+                  "sizeName" : "Small",
+                  "sizePrice" : 230
+                },
+                {
+                  "sizeName" : "Large",
+                  "sizePrice" : 300
+                }
+              ]
+            }
+          ]
         },
         {
           "categoryName" : "Coladas",
