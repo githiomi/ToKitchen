@@ -502,16 +502,108 @@
           ]
         },
         {
-          "categoryName" : "Java Shakes"
+          "categoryName" : "Java Shakes",
+          "meals" : [
+            {
+              "mealName" : "Classic",
+              "mealPrice" : 420
+            },
+            {
+              "mealName" : "Gourmet",
+              "mealPrice" : 440
+            },
+            {
+              "mealName" : "Next Level Shakes",
+              "mealPrice" : 460
+            }
+          ]
         },
         {
-          "categoryName" : "Super Smoothies"
+          "categoryName" : "Super Smoothies",
+          "meals" : [
+            {
+              "mealName" : "Strawberry Splash",
+              "mealPrice" : 380
+            },
+            {
+              "mealName" : "Banana Rama",
+              "mealPrice" : 380
+            },
+            {
+              "mealName" : "Mango Mania",
+              "mealPrice" : 380
+            },
+            {
+              "mealName" : "Tropical Mix",
+              "mealPrice" : 380
+            },
+            {
+              "mealName" : "Pink Panther",
+              "mealPrice" : 380
+            },
+            {
+              "mealName" : "Green Smoothie",
+              "mealPrice" : 380
+            },
+            {
+              "mealName" : "Tropical Thunder",
+              "mealPrice" : 380
+            },
+            {
+              "mealName" : "Fruity Madness Slushy",
+              "mealPrice" : 380
+            }
+          ]
         },
         {
-          "categoryName" : "Iced Tea"
+          "categoryName" : "Iced Tea",
+          "meals" : [
+            {
+              "mealName" : "Iced Tea",
+              "mealPrice" : 240
+            },
+            {
+              "mealName" : "Iced Arnold Palmer",
+              "mealPrice" : 280
+            },
+            {
+              "mealName" : "Iced Tea with Fresh Juice",
+              "mealPrice" : 300
+            }
+          ]
         },
         {
-          "categoryName" : "Iced Coffee"
+          "categoryName" : "Iced Coffee",
+          "meals" : [
+            {
+              "mealName" : "Iced Coffee",
+              "mealPrice" : 240
+            },
+            {
+              "mealName" : "Iced Latte",
+              "mealPrice" : 330
+            },
+            {
+              "mealName" : "Iced Vanilla Latte",
+              "mealPrice" : 330
+            },
+            {
+              "mealName" : "Iced Mocha",
+              "mealPrice" : 340
+            },
+            {
+              "mealName" : "Iced White Chocolate Mocha",
+              "mealPrice" : 340
+            },
+            {
+              "mealName" : "Iced Malindi Macchiato",
+              "mealPrice" : 340
+            },
+            {
+              "mealName" : "Iced Caramel Macchiato",
+              "mealPrice" : 340
+            }
+          ]
         },
         {
           "categoryName" : "Fresh Juices"
@@ -520,7 +612,21 @@
           "categoryName" : "Freshly Squeezed Lemonades"
         },
         {
-          "categoryName" : "Coladas"
+          "categoryName" : "Coladas",
+          "meals" : [
+            {
+              "mealName" : "Pineapple",
+              "mealPrice" : 430
+            },
+            {
+              "mealName" : "Passion",
+              "mealPrice" : 430
+            },
+            {
+              "mealName" : "Minty",
+              "mealPrice" : 430
+            }
+          ]
         }
       ]
     }

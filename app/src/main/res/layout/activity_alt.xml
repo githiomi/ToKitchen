@@ -27,6 +27,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_toEndOf="@id/viewSeparator"
-        android:layout_margin="5dp" />
+        android:layout_margin="5dp" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/java_image"
+            android:scaleType="centerCrop" />
+
+    </FrameLayout>
 
 </RelativeLayout>

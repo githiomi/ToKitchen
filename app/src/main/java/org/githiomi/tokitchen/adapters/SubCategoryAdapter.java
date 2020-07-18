@@ -100,6 +100,11 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
                 ft.commit();
 
             }
+            else if ( currentSubCategory.equals("Soda & Water") ){
+
+                
+
+            }
             else {
 
                 ImageHolderFragment imageHolderFragment = ImageHolderFragment.newInstance();
