@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,6 +17,7 @@ import org.githiomi.tokitchen.R;
 import org.githiomi.tokitchen.fragments.baristas.CoffeeOrderFragment;
 import org.githiomi.tokitchen.fragments.ImageHolderFragment;
 import org.githiomi.tokitchen.fragments.baristas.TeaOrderFragment;
+import org.githiomi.tokitchen.fragments.drinks.ShakesFragment;
 import org.githiomi.tokitchen.fragments.drinks.SodaAndWaterFragment;
 
 import java.util.List;
@@ -96,28 +98,38 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
             else if ( currentSubCategory.equals("Tea & Chocolate") ){
 
                 TeaOrderFragment teaOrderFragment = TeaOrderFragment.newInstance();
-                FragmentTransaction ft = ((FragmentActivity) context).getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.mealSelectFragment, teaOrderFragment);
-                ft.commit();
+                toReplace(teaOrderFragment);
 
             }
             else if ( currentSubCategory.equals("Soda & Water") ){
 
                 SodaAndWaterFragment sodaAndWaterFragment = SodaAndWaterFragment.newInstance();
-                FragmentTransaction ft = ((FragmentActivity) context).getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.mealSelectFragment, sodaAndWaterFragment);
-                ft.commit();
+                toReplace(sodaAndWaterFragment);
+
+            }
+
+            else if ( currentSubCategory.equals("Java Shakes") ){
+
+                ShakesFragment shakesFragment = ShakesFragment.newInstance();
+                toReplace(shakesFragment);
 
             }
             else {
 
                 ImageHolderFragment imageHolderFragment = ImageHolderFragment.newInstance();
-                FragmentTransaction ft = ((FragmentActivity) context).getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.mealSelectFragment, imageHolderFragment);
-                ft.commit();
+                toReplace(imageHolderFragment);
 
             }
 
         }
+    }
+
+    // Custom method that will take in a fragment and use it to replace a view
+    private void toReplace(Fragment fragment){
+
+        FragmentTransaction ft = ((FragmentActivity) context).getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.mealSelectFragment, fragment);
+        ft.commit();
+
     }
 }
