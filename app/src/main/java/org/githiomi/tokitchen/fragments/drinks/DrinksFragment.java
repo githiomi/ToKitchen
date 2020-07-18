@@ -14,13 +14,9 @@ import android.view.ViewGroup;
 
 import org.githiomi.tokitchen.R;
 import org.githiomi.tokitchen.adapters.DrinksTypeAdapter;
-import org.githiomi.tokitchen.adapters.drinks.DrinksWithSizesAdapter;
-import org.githiomi.tokitchen.models.Barista.BaristaSizes;
 import org.githiomi.tokitchen.models.Constants;
-import org.githiomi.tokitchen.models.Drinks.DrinkCategoryTypesWithSizes;
 import org.githiomi.tokitchen.models.Drinks.DrinksCategory;
 import org.githiomi.tokitchen.models.Drinks.DrinksCategoryTypes;
-import org.githiomi.tokitchen.models.Drinks.DrinksTypeSizes;
 import org.githiomi.tokitchen.models.MainCategory;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -50,8 +46,6 @@ public class DrinksFragment extends Fragment {
     private String drinksType;
     // For the adapter
     private DrinksTypeAdapter drinksTypeAdapter;
-    // For the alt adapter
-    private DrinksWithSizesAdapter drinksWithSizesAdapter;
     // For the main categories
     private List<String> categoryNames;
     // For the list of main category objects
@@ -62,10 +56,6 @@ public class DrinksFragment extends Fragment {
     private List<String> subCategoryList;
     // For the list of barista types
     private List<DrinksCategoryTypes> drinksCategoryTypesList;
-    // For the list of drink sizes
-    private List<DrinksTypeSizes> drinksTypeSizesList;
-    // For the drink category with sizes
-    private List<DrinkCategoryTypesWithSizes> drinkCategoryTypesWithSizesList;
 
     public DrinksFragment() {
         // Required empty public constructor
@@ -105,7 +95,7 @@ public class DrinksFragment extends Fragment {
 
     // Method implementation for the extraction of data from source.json
     private void extractData(String drinkType) {
-        Log.d(TAG, "extractData: Java Shakes init");
+        Log.d(TAG, "extractData: " + drinkType + " fragment init");
 
         try {
 //            Locating the file to read the data
@@ -153,76 +143,46 @@ public class DrinksFragment extends Fragment {
                         String forTheDrinksInSubCategory = "meals";
                         JSONArray javaDrinks = mealSubCategories.getJSONArray(forTheDrinksInSubCategory);
 
+                        if ( javaDrinks != null ) {
 
-                        int lengthOfJavaDrinks = javaDrinks.length();
+                            int lengthOfJavaDrinks = javaDrinks.length();
 
-                        drinksCategoryTypesList = new ArrayList();
-                        for (int z = 0; z < lengthOfJavaDrinks; z += 1) {
+                            drinksCategoryTypesList = new ArrayList();
+                            for (int z = 0; z < lengthOfJavaDrinks; z += 1) {
 
-                            JSONObject javaDrink = (JSONObject) javaDrinks.get(z);
+                                JSONObject javaDrink = (JSONObject) javaDrinks.get(z);
 
-                            String toGetDrinkName = "mealName";
-                            String javaDrinkName = javaDrink.getString(toGetDrinkName);
+                                String toGetDrinkName = "mealName";
+                                String javaDrinkName = javaDrink.getString(toGetDrinkName);
 
-                            if (drinkType.equals("Fresh Juices") || drinkType.equals("Freshly Squeezed Lemonades")) {
-                                drinkCategoryTypesWithSizesList = new ArrayList();
-
-                                String forTheSizesOfDrinks = "sizes";
-                                JSONArray sizesOfDrinksArray = javaDrink.getJSONArray(forTheSizesOfDrinks);
-
-                                int sizeOfDrinksArray = sizesOfDrinksArray.length();
-
-                                for (int x = 0; x < sizeOfDrinksArray; x += 1) {
-
-                                    JSONObject theSizes = (JSONObject) sizesOfDrinksArray.get(x);
-
-                                    String sizeName = theSizes.getString("sizeName");
-                                    int sizePrice = theSizes.getInt("sizePrice");
-
-                                    Log.d(TAG, "readJsonFile: One of the sizes for the " + javaDrinkName + " is: " + sizeName + " that costs " + sizePrice);
-
-                                    DrinksTypeSizes drinksTypeSizes = new DrinksTypeSizes(sizeName, sizePrice);
-                                    drinksTypeSizesList.add(drinksTypeSizes);
-
-                                }
-
-                                // Creating objects
-                                DrinkCategoryTypesWithSizes drinkCategoryTypesWithSizes = new DrinkCategoryTypesWithSizes(drinkType, drinksTypeSizesList);
-                                drinkCategoryTypesWithSizesList.add(drinkCategoryTypesWithSizes);
-
-                                // Method to pass the alt data to another adapter
-                                passToAltAdapter(drinkCategoryTypesWithSizesList);
-                                return;
-
-                            } else {
 
                                 String toGetDrinkPrice = "mealPrice";
                                 int javaDrinkPrice = javaDrink.getInt(toGetDrinkPrice);
 
-                                Log.d(TAG, "readJsonFile: Drink details: --------------- " + javaDrinkName + " that will cost: Ksh." + javaDrinkPrice);
+                                Log.d(TAG, "readJsonFile: Soda And Water: --------------- " + javaDrinkName + " that will cost: Ksh." + javaDrinkPrice);
 
                                 // Creating the barista type objects
                                 DrinksCategoryTypes drinksCategoryType = new DrinksCategoryTypes(javaDrinkName, javaDrinkPrice);
                                 drinksCategoryTypesList.add(drinksCategoryType);
 
-
-                                // Creating the drinks category list that holds soda and water and its meals
-                                DrinksCategory drinksCategory = new DrinksCategory(subCategoryName, drinksCategoryTypesList);
-                                drinksCategoryList.add(drinksCategory);
-
                             }
-
-
                         }
 
-                        Log.d(TAG, "readJsonFile: One of the categories is: ---------- " + categoryName);
+                        // Creating the drinks category list that holds soda and water and its meals
+                        DrinksCategory drinksCategory = new DrinksCategory(subCategoryName, drinksCategoryTypesList);
+                        drinksCategoryList.add(drinksCategory);
 
-
-                        // Method to pass the meals to the adapter
-                        Log.d(TAG, "readJsonFile: The array passed to the barista type adapter is: --------- " + drinksCategoryTypesList);
-                        passToAdapter(drinksCategoryTypesList);
                     }
+
+
                 }
+
+                Log.d(TAG, "readJsonFile: One of the categories is: ---------- " + categoryName);
+
+
+                // Method to pass the meals to the adapter
+                Log.d(TAG, "readJsonFile: The array passed to the barista type adapter is: --------- " + drinksCategoryTypesList);
+                passToAdapter(drinksCategoryTypesList);
 
             }
         } catch (Exception ex) {
@@ -232,7 +192,7 @@ public class DrinksFragment extends Fragment {
     }
 
     // Method implementation of the function that will pass data to the adapter
-    private void passToAdapter(List<DrinksCategoryTypes> drinksCategoryTypesToAdapter) {
+    private void passToAdapter(List<DrinksCategoryTypes> drinksCategoryTypesToAdapter){
         Log.d(TAG, "passToAdapter: drinksCategoryTypesListToAdapter init");
 
         Context context = getContext();
@@ -240,22 +200,6 @@ public class DrinksFragment extends Fragment {
         drinksTypeAdapter = new DrinksTypeAdapter(drinksCategoryTypesToAdapter, context);
 
         wDrinksRecyclerView.setAdapter(drinksTypeAdapter);
-        wDrinksRecyclerView.setLayoutManager(new LinearLayoutManager(context));
-
-        wDrinksRecyclerView.setHasFixedSize(true);
-        drinksTypeAdapter.notifyDataSetChanged();
-
-    }
-
-    // Method implementation for the alt adapter for those with sizes
-    private void passToAltAdapter( List<DrinkCategoryTypesWithSizes> drinkCategoryTypesWithSizeToAdapter){
-        Log.d(TAG, "passToAdapter: drinksTypeSizesListToAdapter init");
-
-        Context context = getContext();
-
-        drinksWithSizesAdapter = new DrinksWithSizesAdapter(drinkCategoryTypesWithSizeToAdapter, context);
-
-        wDrinksRecyclerView.setAdapter(drinksWithSizesAdapter);
         wDrinksRecyclerView.setLayoutManager(new LinearLayoutManager(context));
 
         wDrinksRecyclerView.setHasFixedSize(true);

@@ -18,6 +18,7 @@ import org.githiomi.tokitchen.fragments.baristas.CoffeeOrderFragment;
 import org.githiomi.tokitchen.fragments.ImageHolderFragment;
 import org.githiomi.tokitchen.fragments.baristas.TeaOrderFragment;
 import org.githiomi.tokitchen.fragments.drinks.DrinksFragment;
+import org.githiomi.tokitchen.fragments.drinks.DrinksWithSizeFragment;
 
 import java.util.List;
 
@@ -133,14 +134,14 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
             }
             else if ( currentSubCategory.equals("Fresh Juices") ) {
 
-                DrinksFragment drinksFragment = DrinksFragment.newInstance(currentSubCategory);
-                toReplace(drinksFragment);
+                DrinksWithSizeFragment drinksWithSizeFragment = DrinksWithSizeFragment.newInstance(currentSubCategory);
+                toReplace(drinksWithSizeFragment);
 
             }
             else if ( currentSubCategory.equals("Freshly Squeezed Lemonades") ) {
 
-                DrinksFragment drinksFragment = DrinksFragment.newInstance(currentSubCategory);
-                toReplace(drinksFragment);
+                DrinksWithSizeFragment drinksWithSizeFragment = DrinksWithSizeFragment.newInstance(currentSubCategory);
+                toReplace(drinksWithSizeFragment);
 
             }
             else if ( currentSubCategory.equals("Coladas") ) {
