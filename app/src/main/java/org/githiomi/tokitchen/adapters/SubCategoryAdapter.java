@@ -17,7 +17,9 @@ import org.githiomi.tokitchen.R;
 import org.githiomi.tokitchen.fragments.baristas.CoffeeOrderFragment;
 import org.githiomi.tokitchen.fragments.ImageHolderFragment;
 import org.githiomi.tokitchen.fragments.baristas.TeaOrderFragment;
+import org.githiomi.tokitchen.fragments.drinks.DrinksFragment;
 import org.githiomi.tokitchen.fragments.drinks.ShakesFragment;
+import org.githiomi.tokitchen.fragments.drinks.SmoothiesFragment;
 import org.githiomi.tokitchen.fragments.drinks.SodaAndWaterFragment;
 
 import java.util.List;
@@ -90,9 +92,7 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
             if ( currentSubCategory.equals("Coffee & Espresso") ){
 
                 CoffeeOrderFragment coffeeOrderFragment = CoffeeOrderFragment.newInstance();
-                FragmentTransaction ft = ((FragmentActivity) context).getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.mealSelectFragment, coffeeOrderFragment);
-                ft.commit();
+                toReplace(coffeeOrderFragment);
 
             }
             else if ( currentSubCategory.equals("Tea & Chocolate") ){
@@ -112,6 +112,26 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
 
                 ShakesFragment shakesFragment = ShakesFragment.newInstance();
                 toReplace(shakesFragment);
+
+            }
+
+            else if ( currentSubCategory.equals("Super Smoothies") ){
+
+                SmoothiesFragment smoothiesFragment = SmoothiesFragment.newInstance();
+                toReplace(smoothiesFragment);
+
+            }
+
+            else if ( currentSubCategory.equals("Iced Tea") ) {
+
+                DrinksFragment drinksFragment = DrinksFragment.newInstance("Iced Tea");
+                toReplace(drinksFragment);
+
+            }
+            else if ( currentSubCategory.equals("Iced Coffee") ) {
+
+                DrinksFragment drinksFragment = DrinksFragment.newInstance("Iced Coffee");
+                toReplace(drinksFragment);
 
             }
             else {

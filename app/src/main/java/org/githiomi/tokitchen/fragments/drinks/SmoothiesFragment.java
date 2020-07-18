@@ -27,13 +27,19 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ShakesFragment extends Fragment {
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link SmoothiesFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class SmoothiesFragment extends Fragment {
 
     // TAG
-    private static final String TAG = ShakesFragment.class.getSimpleName();
+    private static final String TAG = SmoothiesFragment.class.getSimpleName();
 
-    //Widgets
-    @BindView(R.id.shakesRecyclerView) RecyclerView wShakesRecyclerView;
+    // Widgets
+    @BindView(R.id.smoothiesRecyclerView)
+    RecyclerView wSmoothiesRecyclerView;
 
     // Local Variables
     // For the adapter
@@ -49,13 +55,13 @@ public class ShakesFragment extends Fragment {
     // For the list of barista types
     private List<DrinksCategoryTypes> drinksCategoryTypesList;
 
-    public ShakesFragment() {
+    public SmoothiesFragment() {
         // Required empty public constructor
     }
 
-
-    public static ShakesFragment newInstance() {
-        ShakesFragment fragment = new ShakesFragment();
+    // TODO: Rename and change types and number of parameters
+    public static SmoothiesFragment newInstance() {
+        SmoothiesFragment fragment = new SmoothiesFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -72,20 +78,21 @@ public class ShakesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View mainView = inflater.inflate(R.layout.fragment_shakes, container, false);
+        View mainView = inflater.inflate(R.layout.fragment_smoothies, container, false);
 
-        // binding the widgets
+        // Binding widgets
         ButterKnife.bind(this, mainView);
 
-        // Method call to extract data from source.json
-        extractData();
+        // Method call to extract data
+        extractData();;
 
         return mainView;
+
     }
 
     // Method implementation for the extraction of data from source.json
     private void extractData() {
-        Log.d(TAG, "extractData: Java Shakes init");
+        Log.d(TAG, "extractData: Smoothies init");
 
         try {
 //            Locating the file to read the data
@@ -125,7 +132,7 @@ public class ShakesFragment extends Fragment {
                     String bCategoryName = mealSubCategories.getString(forTheSubCategories);
                     Log.d(TAG, categoryName + " categories: " + bCategoryName);
 
-                    if (bCategoryName.equals("Java Shakes")) {
+                    if (bCategoryName.equals("Super Smoothies")) {
 
                         drinksCategoryList = new ArrayList();
 
@@ -147,7 +154,7 @@ public class ShakesFragment extends Fragment {
                             String toGetShakesPrice = "mealPrice";
                             int javaShakesPrice = sodaAndWater.getInt(toGetShakesPrice);
 
-                            Log.d(TAG, "readJsonFile: Soda And Water: --------------- " + javaShakesName + " that will cost: Ksh." + javaShakesPrice );
+                            Log.d(TAG, "readJsonFile: Soda And Water: --------------- " + javaShakesName + " that will cost: Ksh." + javaShakesPrice);
 
                             // Creating the barista type objects
                             DrinksCategoryTypes drinksCategoryType = new DrinksCategoryTypes(javaShakesName, javaShakesPrice);
@@ -160,7 +167,6 @@ public class ShakesFragment extends Fragment {
                         drinksCategoryList.add(drinksCategory);
 
                     }
-
 
 
                 }
@@ -180,17 +186,17 @@ public class ShakesFragment extends Fragment {
     }
 
     // Method implementation of the function that will pass data to the adapter
-    private void passToAdapter(List<DrinksCategoryTypes> drinksCategoryTypesToAdapter){
+    private void passToAdapter(List<DrinksCategoryTypes> drinksCategoryTypesToAdapter) {
         Log.d(TAG, "passToAdapter: drinksCategoryTypesListToAdapter init");
 
         Context context = getContext();
 
         drinksTypeAdapter = new DrinksTypeAdapter(drinksCategoryTypesToAdapter, context);
 
-        wShakesRecyclerView.setAdapter(drinksTypeAdapter);
-        wShakesRecyclerView.setLayoutManager(new LinearLayoutManager(context));
+        wSmoothiesRecyclerView.setAdapter(drinksTypeAdapter);
+        wSmoothiesRecyclerView.setLayoutManager(new LinearLayoutManager(context));
 
-        wShakesRecyclerView.setHasFixedSize(true);
+        wSmoothiesRecyclerView.setHasFixedSize(true);
         drinksTypeAdapter.notifyDataSetChanged();
 
     }

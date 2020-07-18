@@ -10,6 +10,9 @@ public class Constants {
     // Key for the main category name being passed to the sub category activity
     public static final String MAIN_CATEGORY_NAME = "Main Category";
 
+    // This is the key for the string fragments will use to unwrap drink type names
+    public static final String DRINK_TYPE_NAME = "Drink Type Name";
+
 //    Methods
     //    Method that will return data file location
     public static String loadJsonFromAssets(Context context) {

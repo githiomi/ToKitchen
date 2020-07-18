@@ -27,15 +27,23 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ShakesFragment extends Fragment {
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link DrinksFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class DrinksFragment extends Fragment {
 
     // TAG
-    private static final String TAG = ShakesFragment.class.getSimpleName();
+    private static final String TAG = DrinksFragment.class.getSimpleName();
 
-    //Widgets
-    @BindView(R.id.shakesRecyclerView) RecyclerView wShakesRecyclerView;
+    // Widget
+    @BindView(R.id.drinksRecyclerView)
+    RecyclerView wDrinksRecyclerView;
 
     // Local Variables
+    // For the type of drink passed in
+    private String drinksType;
     // For the adapter
     private DrinksTypeAdapter drinksTypeAdapter;
     // For the main categories
@@ -49,14 +57,15 @@ public class ShakesFragment extends Fragment {
     // For the list of barista types
     private List<DrinksCategoryTypes> drinksCategoryTypesList;
 
-    public ShakesFragment() {
+    public DrinksFragment() {
         // Required empty public constructor
     }
 
-
-    public static ShakesFragment newInstance() {
-        ShakesFragment fragment = new ShakesFragment();
+    // TODO: Rename and change types and number of parameters
+    public static DrinksFragment newInstance(String drinkTypeName) {
+        DrinksFragment fragment = new DrinksFragment();
         Bundle args = new Bundle();
+        args.putString(Constants.DRINK_TYPE_NAME, drinkTypeName);
         fragment.setArguments(args);
         return fragment;
     }
@@ -65,6 +74,7 @@ public class ShakesFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
+            drinksType = getArguments().getString(Constants.DRINK_TYPE_NAME);
         }
     }
 
@@ -72,19 +82,19 @@ public class ShakesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View mainView = inflater.inflate(R.layout.fragment_shakes, container, false);
+        View mainView = inflater.inflate(R.layout.fragment_drinks, container, false);
 
-        // binding the widgets
+        // Binding widgets
         ButterKnife.bind(this, mainView);
 
-        // Method call to extract data from source.json
-        extractData();
+        // Method call to extract data from souce.json
+        extractData(drinksType);
 
         return mainView;
     }
 
     // Method implementation for the extraction of data from source.json
-    private void extractData() {
+    private void extractData(String drinkType) {
         Log.d(TAG, "extractData: Java Shakes init");
 
         try {
@@ -125,7 +135,7 @@ public class ShakesFragment extends Fragment {
                     String bCategoryName = mealSubCategories.getString(forTheSubCategories);
                     Log.d(TAG, categoryName + " categories: " + bCategoryName);
 
-                    if (bCategoryName.equals("Java Shakes")) {
+                    if (bCategoryName.equals(drinkType)) {
 
                         drinksCategoryList = new ArrayList();
 
@@ -147,7 +157,7 @@ public class ShakesFragment extends Fragment {
                             String toGetShakesPrice = "mealPrice";
                             int javaShakesPrice = sodaAndWater.getInt(toGetShakesPrice);
 
-                            Log.d(TAG, "readJsonFile: Soda And Water: --------------- " + javaShakesName + " that will cost: Ksh." + javaShakesPrice );
+                            Log.d(TAG, "readJsonFile: Soda And Water: --------------- " + javaShakesName + " that will cost: Ksh." + javaShakesPrice);
 
                             // Creating the barista type objects
                             DrinksCategoryTypes drinksCategoryType = new DrinksCategoryTypes(javaShakesName, javaShakesPrice);
@@ -160,7 +170,6 @@ public class ShakesFragment extends Fragment {
                         drinksCategoryList.add(drinksCategory);
 
                     }
-
 
 
                 }
@@ -187,10 +196,10 @@ public class ShakesFragment extends Fragment {
 
         drinksTypeAdapter = new DrinksTypeAdapter(drinksCategoryTypesToAdapter, context);
 
-        wShakesRecyclerView.setAdapter(drinksTypeAdapter);
-        wShakesRecyclerView.setLayoutManager(new LinearLayoutManager(context));
+        wDrinksRecyclerView.setAdapter(drinksTypeAdapter);
+        wDrinksRecyclerView.setLayoutManager(new LinearLayoutManager(context));
 
-        wShakesRecyclerView.setHasFixedSize(true);
+        wDrinksRecyclerView.setHasFixedSize(true);
         drinksTypeAdapter.notifyDataSetChanged();
 
     }
