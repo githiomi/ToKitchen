@@ -87,7 +87,7 @@ public class DrinksFragment extends Fragment {
         // Binding widgets
         ButterKnife.bind(this, mainView);
 
-        // Method call to extract data from souce.json
+        // Method call to extract data from source.json
         extractData(drinksType);
 
         return mainView;
@@ -121,52 +121,55 @@ public class DrinksFragment extends Fragment {
 
                 // To get the categories inside the 4 main categories
                 String mealCategoriesKey = "categories";
-                JSONArray breakfastCategories = mealCategory.getJSONArray(mealCategoriesKey);
-                int length = breakfastCategories.length();
+                JSONArray subCategories = mealCategory.getJSONArray(mealCategoriesKey);
+                int length = subCategories.length();
 
                 // Initializing the array list
                 subCategoryList = new ArrayList();
 
                 for (int d = 0; d < length; d += 1) {
 
-                    JSONObject mealSubCategories = (JSONObject) breakfastCategories.get(d);
+                    JSONObject mealSubCategories = (JSONObject) subCategories.get(d);
 
                     String forTheSubCategories = "categoryName";
-                    String bCategoryName = mealSubCategories.getString(forTheSubCategories);
-                    Log.d(TAG, categoryName + " categories: " + bCategoryName);
+                    String subCategoryName = mealSubCategories.getString(forTheSubCategories);
+                    Log.d(TAG, categoryName + " categories: " + subCategoryName);
 
-                    if (bCategoryName.equals(drinkType)) {
+                    if (subCategoryName.equals(drinkType)) {
 
                         drinksCategoryList = new ArrayList();
 
                         // To get the meals in the sub category
-                        String forTheMealsInSubCategory = "meals";
-                        JSONArray javaShakes = mealSubCategories.getJSONArray(forTheMealsInSubCategory);
+                        String forTheDrinksInSubCategory = "meals";
+                        JSONArray javaDrinks = mealSubCategories.getJSONArray(forTheDrinksInSubCategory);
 
-                        int lengthOfJavaShakes = javaShakes.length();
+                        if ( javaDrinks != null ) {
 
-                        drinksCategoryTypesList = new ArrayList();
-                        for (int z = 0; z < lengthOfJavaShakes; z += 1) {
+                            int lengthOfJavaDrinks = javaDrinks.length();
 
-                            JSONObject sodaAndWater = (JSONObject) javaShakes.get(z);
+                            drinksCategoryTypesList = new ArrayList();
+                            for (int z = 0; z < lengthOfJavaDrinks; z += 1) {
 
-                            String toGetShakesName = "mealName";
-                            String javaShakesName = sodaAndWater.getString(toGetShakesName);
+                                JSONObject javaDrink = (JSONObject) javaDrinks.get(z);
+
+                                String toGetDrinkName = "mealName";
+                                String javaDrinkName = javaDrink.getString(toGetDrinkName);
 
 
-                            String toGetShakesPrice = "mealPrice";
-                            int javaShakesPrice = sodaAndWater.getInt(toGetShakesPrice);
+                                String toGetDrinkPrice = "mealPrice";
+                                int javaDrinkPrice = javaDrink.getInt(toGetDrinkPrice);
 
-                            Log.d(TAG, "readJsonFile: Soda And Water: --------------- " + javaShakesName + " that will cost: Ksh." + javaShakesPrice);
+                                Log.d(TAG, "readJsonFile: Soda And Water: --------------- " + javaDrinkName + " that will cost: Ksh." + javaDrinkPrice);
 
-                            // Creating the barista type objects
-                            DrinksCategoryTypes drinksCategoryType = new DrinksCategoryTypes(javaShakesName, javaShakesPrice);
-                            drinksCategoryTypesList.add(drinksCategoryType);
+                                // Creating the barista type objects
+                                DrinksCategoryTypes drinksCategoryType = new DrinksCategoryTypes(javaDrinkName, javaDrinkPrice);
+                                drinksCategoryTypesList.add(drinksCategoryType);
 
+                            }
                         }
 
                         // Creating the drinks category list that holds soda and water and its meals
-                        DrinksCategory drinksCategory = new DrinksCategory(bCategoryName, drinksCategoryTypesList);
+                        DrinksCategory drinksCategory = new DrinksCategory(subCategoryName, drinksCategoryTypesList);
                         drinksCategoryList.add(drinksCategory);
 
                     }

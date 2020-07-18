@@ -606,10 +606,12 @@
           ]
         },
         {
-          "categoryName" : "Fresh Juices"
+          "categoryName" : "Fresh Juices",
+          "meals" : []
         },
         {
-          "categoryName" : "Freshly Squeezed Lemonades"
+          "categoryName" : "Freshly Squeezed Lemonades",
+          "meals" : []
         },
         {
           "categoryName" : "Coladas",

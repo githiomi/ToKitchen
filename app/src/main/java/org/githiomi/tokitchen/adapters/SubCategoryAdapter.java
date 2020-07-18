@@ -18,9 +18,6 @@ import org.githiomi.tokitchen.fragments.baristas.CoffeeOrderFragment;
 import org.githiomi.tokitchen.fragments.ImageHolderFragment;
 import org.githiomi.tokitchen.fragments.baristas.TeaOrderFragment;
 import org.githiomi.tokitchen.fragments.drinks.DrinksFragment;
-import org.githiomi.tokitchen.fragments.drinks.ShakesFragment;
-import org.githiomi.tokitchen.fragments.drinks.SmoothiesFragment;
-import org.githiomi.tokitchen.fragments.drinks.SodaAndWaterFragment;
 
 import java.util.List;
 
@@ -103,34 +100,52 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
             }
             else if ( currentSubCategory.equals("Soda & Water") ){
 
-                SodaAndWaterFragment sodaAndWaterFragment = SodaAndWaterFragment.newInstance();
-                toReplace(sodaAndWaterFragment);
+                DrinksFragment drinksFragment = DrinksFragment.newInstance(currentSubCategory);
+                toReplace(drinksFragment);
 
             }
 
             else if ( currentSubCategory.equals("Java Shakes") ){
 
-                ShakesFragment shakesFragment = ShakesFragment.newInstance();
-                toReplace(shakesFragment);
+                DrinksFragment drinksFragment = DrinksFragment.newInstance(currentSubCategory);
+                toReplace(drinksFragment);
 
             }
 
             else if ( currentSubCategory.equals("Super Smoothies") ){
 
-                SmoothiesFragment smoothiesFragment = SmoothiesFragment.newInstance();
-                toReplace(smoothiesFragment);
+                DrinksFragment drinksFragment = DrinksFragment.newInstance(currentSubCategory);
+                toReplace(drinksFragment);
 
             }
 
             else if ( currentSubCategory.equals("Iced Tea") ) {
 
-                DrinksFragment drinksFragment = DrinksFragment.newInstance("Iced Tea");
+                DrinksFragment drinksFragment = DrinksFragment.newInstance(currentSubCategory);
                 toReplace(drinksFragment);
 
             }
             else if ( currentSubCategory.equals("Iced Coffee") ) {
 
-                DrinksFragment drinksFragment = DrinksFragment.newInstance("Iced Coffee");
+                DrinksFragment drinksFragment = DrinksFragment.newInstance(currentSubCategory);
+                toReplace(drinksFragment);
+
+            }
+            else if ( currentSubCategory.equals("Fresh Juices") ) {
+
+                DrinksFragment drinksFragment = DrinksFragment.newInstance(currentSubCategory);
+                toReplace(drinksFragment);
+
+            }
+            else if ( currentSubCategory.equals("Freshly Squeezed Lemonades") ) {
+
+                DrinksFragment drinksFragment = DrinksFragment.newInstance(currentSubCategory);
+                toReplace(drinksFragment);
+
+            }
+            else if ( currentSubCategory.equals("Coladas") ) {
+
+                DrinksFragment drinksFragment = DrinksFragment.newInstance(currentSubCategory);
                 toReplace(drinksFragment);
 
             }
