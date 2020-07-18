@@ -1,6 +1,5 @@
-package org.githiomi.tokitchen.fragments;
+package org.githiomi.tokitchen.fragments.ui;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 

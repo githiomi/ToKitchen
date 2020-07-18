@@ -1,4 +1,4 @@
-package org.githiomi.tokitchen.adapters;
+package org.githiomi.tokitchen.adapters.drinks;
 
 import android.content.Context;
 import android.view.LayoutInflater;

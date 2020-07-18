@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import org.githiomi.tokitchen.R;
-import org.githiomi.tokitchen.adapters.BaristaTypeAdapter;
+import org.githiomi.tokitchen.adapters.baristas.BaristaTypeAdapter;
 import org.githiomi.tokitchen.models.Barista.BaristaCategory;
 import org.githiomi.tokitchen.models.Barista.BaristaSizes;
 import org.githiomi.tokitchen.models.Barista.BaristaType;

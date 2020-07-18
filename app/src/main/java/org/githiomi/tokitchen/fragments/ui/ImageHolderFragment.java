@@ -1,4 +1,4 @@
-package org.githiomi.tokitchen.fragments;
+package org.githiomi.tokitchen.fragments.ui;
 
 import android.os.Bundle;
 

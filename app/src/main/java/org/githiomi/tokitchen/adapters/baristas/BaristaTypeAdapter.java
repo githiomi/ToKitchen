@@ -1,4 +1,4 @@
-package org.githiomi.tokitchen.adapters;
+package org.githiomi.tokitchen.adapters.baristas;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.githiomi.tokitchen.R;
+import org.githiomi.tokitchen.adapters.spinners.SpinnerDropDownAdapter;
 import org.githiomi.tokitchen.models.Barista.BaristaSizes;
 import org.githiomi.tokitchen.models.Barista.BaristaType;
 

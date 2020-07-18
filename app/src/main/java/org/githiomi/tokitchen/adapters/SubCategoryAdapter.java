@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.githiomi.tokitchen.R;
 import org.githiomi.tokitchen.fragments.baristas.CoffeeOrderFragment;
-import org.githiomi.tokitchen.fragments.ImageHolderFragment;
+import org.githiomi.tokitchen.fragments.ui.ImageHolderFragment;
 import org.githiomi.tokitchen.fragments.baristas.TeaOrderFragment;
 import org.githiomi.tokitchen.fragments.drinks.DrinksFragment;
 import org.githiomi.tokitchen.fragments.drinks.DrinksWithSizeFragment;

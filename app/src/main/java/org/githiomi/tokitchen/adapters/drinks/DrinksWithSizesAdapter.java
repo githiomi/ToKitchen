@@ -13,9 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.githiomi.tokitchen.R;
-import org.githiomi.tokitchen.adapters.SpinnerDropDownAdapter;
 import org.githiomi.tokitchen.adapters.spinners.DrinkSizesSpinner;
-import org.githiomi.tokitchen.models.Barista.BaristaSizes;
 import org.githiomi.tokitchen.models.Drinks.DrinkCategoryTypesWithSizes;
 import org.githiomi.tokitchen.models.Drinks.DrinksTypeSizes;
 

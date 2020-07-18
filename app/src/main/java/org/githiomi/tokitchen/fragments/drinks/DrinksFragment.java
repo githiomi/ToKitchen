@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import org.githiomi.tokitchen.R;
-import org.githiomi.tokitchen.adapters.DrinksTypeAdapter;
+import org.githiomi.tokitchen.adapters.drinks.DrinksTypeAdapter;
 import org.githiomi.tokitchen.models.Constants;
 import org.githiomi.tokitchen.models.Drinks.DrinksCategory;
 import org.githiomi.tokitchen.models.Drinks.DrinksCategoryTypes;

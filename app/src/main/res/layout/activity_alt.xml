@@ -9,7 +9,7 @@
 
     <fragment
         android:id="@+id/panelFragment"
-        android:name="org.githiomi.tokitchen.fragments.PanelFragment"
+        android:name="org.githiomi.tokitchen.fragments.ui.PanelFragment"
         android:layout_width="350dp"
         android:layout_height="match_parent"
         android:layout_margin="5dp"
