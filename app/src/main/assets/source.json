@@ -563,6 +563,14 @@
               "mealPrice" : 240
             },
             {
+              "mealName" : "Iced Lemon & Ginger",
+              "mealPrice" : 240
+            },
+            {
+              "mealName" : "Iced Herbal Tea",
+              "mealPrice" : 240
+            },
+            {
               "mealName" : "Iced Arnold Palmer",
               "mealPrice" : 280
             },
