@@ -16,6 +16,7 @@ import org.githiomi.tokitchen.R;
 import org.githiomi.tokitchen.fragments.baristas.CoffeeOrderFragment;
 import org.githiomi.tokitchen.fragments.ImageHolderFragment;
 import org.githiomi.tokitchen.fragments.baristas.TeaOrderFragment;
+import org.githiomi.tokitchen.fragments.drinks.SodaAndWaterFragment;
 
 import java.util.List;
 
@@ -102,7 +103,10 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
             }
             else if ( currentSubCategory.equals("Soda & Water") ){
 
-                
+                SodaAndWaterFragment sodaAndWaterFragment = SodaAndWaterFragment.newInstance();
+                FragmentTransaction ft = ((FragmentActivity) context).getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.mealSelectFragment, sodaAndWaterFragment);
+                ft.commit();
 
             }
             else {
