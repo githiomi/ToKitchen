@@ -477,7 +477,29 @@
       "name" : "Drinks",
       "categories" : [
         {
-          "categoryName" : "Soda & Water"
+          "categoryName" : "Soda & Water",
+          "meals" : [
+            {
+              "mealName" : "Soda",
+              "mealPrice" : 160
+            },
+            {
+              "mealName" : "Diet Soda",
+              "mealPrice" : 190
+            },
+            {
+              "mealName" : "Mineral Water (Still) 500ml",
+              "mealPrice" : 170
+            },
+            {
+              "mealName" : "Mineral Water (Still) 1000ml",
+              "mealPrice" : 260
+            },
+            {
+              "mealName" : "Mineral Water (Sparkling) 500ml",
+              "mealPrice" : 190
+            }
+          ]
         },
         {
           "categoryName" : "Java Shakes"
