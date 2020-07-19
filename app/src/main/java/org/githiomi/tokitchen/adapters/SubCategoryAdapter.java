@@ -88,7 +88,12 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
             String currentSubCategory = subCategoryNames.get(currentItem);
             Toast.makeText(context, currentSubCategory, Toast.LENGTH_SHORT).show();
 
-            if ( currentSubCategory.equals("Coffee & Espresso") ){
+            if ( currentSubCategory.equals("Quick Bites") ){
+
+
+
+            }
+            else  if ( currentSubCategory.equals("Coffee & Espresso") ){
 
                 CoffeeOrderFragment coffeeOrderFragment = CoffeeOrderFragment.newInstance();
                 toReplace(coffeeOrderFragment);
@@ -175,7 +180,6 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
                 toReplace(imageHolderFragment);
 
             }
-
         }
     }
 

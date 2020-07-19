@@ -75,30 +75,30 @@
                                 android:layout_toRightOf="@id/txtSize"
                                 android:padding="5dp" />
 
-                            <ImageView
-                                android:id="@+id/ivButtonAddEspresso"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_margin="5dp"
-                                android:layout_toRightOf="@id/spinnerSizeDropDown"
-                                android:background="@color/colorPrimary"
-                                android:clickable="true"
-                                android:padding="8dp"
-                                android:src="@drawable/ic_add" />
+<!--                            <ImageView-->
+<!--                                android:id="@+id/ivButtonAddEspresso"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_centerVertical="true"-->
+<!--                                android:layout_margin="5dp"-->
+<!--                                android:layout_toRightOf="@id/spinnerSizeDropDown"-->
+<!--                                android:background="@color/colorPrimary"-->
+<!--                                android:clickable="true"-->
+<!--                                android:padding="8dp"-->
+<!--                                android:src="@drawable/ic_add" />-->
 
-                            <ImageView
-                                android:id="@+id/ivButtonAddSyrup"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_margin="5dp"
-                                android:layout_toRightOf="@id/ivButtonAddEspresso"
-                                android:background="@color/colorPrimary"
-                                android:clickable="true"
-                                android:contentDescription="TODO"
-                                android:padding="8dp"
-                                android:src="@drawable/ic_add" />
+<!--                            <ImageView-->
+<!--                                android:id="@+id/ivButtonAddSyrup"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_centerVertical="true"-->
+<!--                                android:layout_margin="5dp"-->
+<!--                                android:layout_toRightOf="@id/ivButtonAddEspresso"-->
+<!--                                android:background="@color/colorPrimary"-->
+<!--                                android:clickable="true"-->
+<!--                                android:contentDescription="TODO"-->
+<!--                                android:padding="8dp"-->
+<!--                                android:src="@drawable/ic_add" />-->
 
                         </RelativeLayout>
 

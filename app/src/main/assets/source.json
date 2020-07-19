@@ -107,7 +107,65 @@
           "categoryName": "Salads"
         },
         {
-          "categoryName": "Quick Bites"
+          "categoryName": "Quick Bites",
+          "meals" : [
+            {
+              "mealName" : "Giant Samosa",
+              "mealTypes" : [
+                {
+                  "typeName" : "Beef",
+                  "typePrice" : 230
+                },
+                {
+                  "typeName" : "Chicken",
+                  "typePrice" : 230
+                }
+              ]
+            },
+            {
+              "mealName" : "Chicken Wings",
+              "mealTypes" : [
+                {
+                  "typeName" : "5 Pieces",
+                  "typePrice" : 480
+                },
+                {
+                  "typeName" : "10 Pieces",
+                  "typePrice" : 890
+                }
+              ]
+            },
+            {
+              "mealName" : "Chips",
+              "mealTypes" : [
+                {
+                  "typeName" : "Regular",
+                  "typePrice" : 280
+                },
+                {
+                  "typeName" : "Spiced",
+                  "typePrice" : 280
+                },
+                {
+                  "typeName" : "Chicken",
+                  "typePrice" : 370
+                },
+                {
+                  "typeName" : "Chips & Sausage",
+                  "typePrice" : 470
+                }
+              ]
+            },
+            {
+              "mealName" : "Loaded Fries",
+              "mealTypes" : [
+                {
+                  "typeName" : "BBQ Chicken",
+                  "typePrice" : 800
+                }
+              ]
+            }
+          ]
         },
         {
           "categoryName": "Sandwiches"
