@@ -43,8 +43,6 @@ public class BakeryFragment extends Fragment {
     private BakeryTypeAdapter bakeryTypeAdapter;
     // For the string passed in (bakery sub category)
     private String bakerySubCategory;
-    // For the adapter
-    private DrinksTypeAdapter drinksTypeAdapter;
     // For the main categories
     private List<String> categoryNames;
     // For the list of main category objects
@@ -182,7 +180,7 @@ public class BakeryFragment extends Fragment {
 
         bakeryTypeAdapter = new BakeryTypeAdapter(bakedGoodsListToAdapter, context);
 
-        wBakeryRecyclerView.setAdapter(drinksTypeAdapter);
+        wBakeryRecyclerView.setAdapter(bakeryTypeAdapter);
         wBakeryRecyclerView.setLayoutManager(new LinearLayoutManager(context));
 
         wBakeryRecyclerView.setNestedScrollingEnabled(false);

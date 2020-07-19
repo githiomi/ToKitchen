@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.githiomi.tokitchen.R;
+import org.githiomi.tokitchen.fragments.bakery.BakeryFragment;
 import org.githiomi.tokitchen.fragments.baristas.CoffeeOrderFragment;
 import org.githiomi.tokitchen.fragments.ui.ImageHolderFragment;
 import org.githiomi.tokitchen.fragments.baristas.TeaOrderFragment;
@@ -152,8 +153,20 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
             }
             else if ( currentSubCategory.equals("Baked goods") ) {
 
-                DrinksFragment drinksFragment = DrinksFragment.newInstance(currentSubCategory);
-                toReplace(drinksFragment);
+                BakeryFragment bakeryFragment = BakeryFragment.newInstance(currentSubCategory);
+                toReplace(bakeryFragment);
+
+            }
+            else if ( currentSubCategory.equals("Pies") ) {
+
+                BakeryFragment bakeryFragment = BakeryFragment.newInstance(currentSubCategory);
+                toReplace(bakeryFragment);
+
+            }
+            else if ( currentSubCategory.equals("Cakes") ) {
+
+                BakeryFragment bakeryFragment = BakeryFragment.newInstance(currentSubCategory);
+                toReplace(bakeryFragment);
 
             }
             else {
