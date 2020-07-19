@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -69,6 +70,8 @@ public class LunchAndDinnerAdapter extends RecyclerView.Adapter<LunchAndDinnerAd
             // Binding view with butter knife
             ButterKnife.bind(this, itemView);
 
+            // Setting the on click listener
+            wButtonAddOrder.setOnClickListener(this);
 
         }
 
@@ -87,6 +90,15 @@ public class LunchAndDinnerAdapter extends RecyclerView.Adapter<LunchAndDinnerAd
 
         @Override
         public void onClick(View view) {
+
+            int currentPosition = getAdapterPosition();
+
+            if ( view == wButtonAddOrder ){
+
+                String mealName = quickBitesList.get(currentPosition).getMealName();
+                Toast.makeText(context, mealName, Toast.LENGTH_SHORT).show();
+
+            }
 
         }
     }
