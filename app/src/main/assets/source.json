@@ -1,126 +1,125 @@
 {
-  "java" : [
+  "java": [
     {
-      "name" : "Breakfast",
-      "categories" : [
+      "name": "Breakfast",
+      "categories": [
         {
-          "categoryName" : "Health Kick",
-          "meals" : [
+          "categoryName": "Health Kick",
+          "meals": [
             {
-              "mealName" : "Fruit Salad",
-              "description" : "",
-              "price" : 380
+              "mealName": "Fruit Salad",
+              "description": "",
+              "price": 380
             },
             {
-              "mealName" : "Fruit Salad",
-              "description" : "With yogurt honey and nuts",
-              "price" : 490
+              "mealName": "Fruit Salad",
+              "description": "With yogurt honey and nuts",
+              "price": 490
             },
             {
-              "mealName" : "Hot Oatmeal Porridge",
-              "description" : "With almonds, raisins & brown sugar",
-              "price" : 440
+              "mealName": "Hot Oatmeal Porridge",
+              "description": "With almonds, raisins & brown sugar",
+              "price": 440
             },
             {
-              "mealName" : "Homemade Granola",
-              "description" : "With milk or yogurt and choice of honey or strawberries",
-              "price" : 500
+              "mealName": "Homemade Granola",
+              "description": "With milk or yogurt and choice of honey or strawberries",
+              "price": 500
             }
           ]
         },
         {
-          "categoryName" : "Sweet Tooth",
-          "meals" : [
+          "categoryName": "Sweet Tooth",
+          "meals": [
             {
-              "mealName" : "French Toast",
-              "description" : "Single Brioche French Toast",
-              "price" : 230
+              "mealName": "French Toast",
+              "description": "Single Brioche French Toast",
+              "price": 230
             },
             {
-              "mealName" : "French Toast",
-              "description" : "Brioche French Toast (Classic / Choc Chip / Strawberry Chocolate / Choco Banana)",
-              "price" : 550
+              "mealName": "French Toast",
+              "description": "Brioche French Toast (Classic / Choc Chip / Strawberry Chocolate / Choco Banana)",
+              "price": 550
             },
             {
-              "mealName" : "Pancake",
-              "description" : "Single fluffy homemade pancake with butter & syrup",
-              "price" : 260
+              "mealName": "Pancake",
+              "description": "Single fluffy homemade pancake with butter & syrup",
+              "price": 260
             },
             {
-              "mealName" : "Pancake",
-              "description" : "Classic",
-              "price" : 550
+              "mealName": "Pancake",
+              "description": "Classic",
+              "price": 550
             }
           ]
         },
         {
-          "categoryName" : "Sumptuous Savoury",
-          "meals" : [
+          "categoryName": "Sumptuous Savoury",
+          "meals": [
             {
-              "mealName" : "Open Toast",
-              "description" : "Toast with avocado, cherry tomatoes & balsamic reduction",
-              "price" : 380
+              "mealName": "Open Toast",
+              "description": "Toast with avocado, cherry tomatoes & balsamic reduction",
+              "price": 380
             },
             {
-              "mealName" : "Breakfast Sandwich",
-              "description" : "Choice of croissant, white or wholemeal bread",
-              "types" : [
+              "mealName": "Breakfast Sandwich",
+              "description": "Choice of croissant, white or wholemeal bread",
+              "types": [
                 {
-                  "type" : "Egg & cheese",
-                  "price" : 460
+                  "type": "Egg & cheese",
+                  "price": 460
                 },
                 {
-                  "type" : "Egg & cheese with Bacon, Ham or Sausage",
-                  "price" : 600
+                  "type": "Egg & cheese with Bacon, Ham or Sausage",
+                  "price": 600
                 }
               ]
             },
             {
-              "mealName" : "Eggs",
-              "description" : "Just the Way You Like",
-              "types" : [
-
+              "mealName": "Eggs",
+              "description": "Just the Way You Like",
+              "types": [
               ]
             }
           ]
         },
         {
-          "categoryName" : "Hearty Breakfast Plates",
-          "meals" : [
+          "categoryName": "Hearty Breakfast Plates",
+          "meals": [
             {
-              "mealName" : "Java Full Breakfast",
-              "description" : "Two eggs with toast, home fries, baked beans & your choice of bacon, ham or sausage",
-              "price" : 740
+              "mealName": "Java Full Breakfast",
+              "description": "Two eggs with toast, home fries, baked beans & your choice of bacon, ham or sausage",
+              "price": 740
             },
             {
-              "mealName" : "Java Full Breakfast",
-              "description" : "Served with your choice of single house coffee, tea or small glass of fresh juice",
-              "price" : 820
+              "mealName": "Java Full Breakfast",
+              "description": "Served with your choice of single house coffee, tea or small glass of fresh juice",
+              "price": 820
             }
           ]
         }
       ]
     },
     {
-      "name" : "Lunch & Dinner",
-      "categories" : [
+      "name": "Lunch & Dinner",
+      "categories": [
         {
-          "categoryName" : "Salads"
+          "categoryName": "Salads"
         },
         {
-          "categoryName" : "Quick Bites"
+          "categoryName": "Quick Bites"
         },
         {
-          "categoryName" : "Sandwiches"
+          "categoryName": "Sandwiches"
         },
         {
-          "categoryName" : "Wraps"
+          "categoryName": "Wraps"
         },
         {
-          "categoryName" : "Burgers"
+          "categoryName": "Burgers"
         },
         {
-          "categoryName" : "Signature dishes"
+          "categoryName": "Signature dishes"
         }
       ]
     },
@@ -129,225 +128,225 @@
       "categories": [
         {
           "categoryName": "Coffee & Espresso",
-          "meals" : [
+          "meals": [
             {
-              "mealName" : "House Coffee",
-              "sizes" : [
+              "mealName": "House Coffee",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 170
+                  "sizeName": "Single",
+                  "sizePrice": 170
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 210
+                  "sizeName": "Double",
+                  "sizePrice": 210
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 240
+                  "sizeName": "Triple",
+                  "sizePrice": 240
                 }
               ]
             },
             {
-              "mealName" : "Espresso",
-              "sizes" : [
+              "mealName": "Espresso",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 170
+                  "sizeName": "Single",
+                  "sizePrice": 170
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 210
+                  "sizeName": "Double",
+                  "sizePrice": 210
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 240
+                  "sizeName": "Triple",
+                  "sizePrice": 240
                 }
               ]
             },
             {
-              "mealName" : "Macchiato",
-              "sizes" : [
+              "mealName": "Macchiato",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 180
+                  "sizeName": "Single",
+                  "sizePrice": 180
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 220
+                  "sizeName": "Double",
+                  "sizePrice": 220
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 250
+                  "sizeName": "Triple",
+                  "sizePrice": 250
                 }
               ]
             },
             {
-              "mealName" : "Americano",
-              "sizes" : [
+              "mealName": "Americano",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 180
+                  "sizeName": "Single",
+                  "sizePrice": 180
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 230
+                  "sizeName": "Double",
+                  "sizePrice": 230
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 270
+                  "sizeName": "Triple",
+                  "sizePrice": 270
                 }
               ]
             },
             {
-              "mealName" : "Café au Lait",
-              "sizes" : [
+              "mealName": "Café au Lait",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 180
+                  "sizeName": "Single",
+                  "sizePrice": 180
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 230
+                  "sizeName": "Double",
+                  "sizePrice": 230
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 270
+                  "sizeName": "Triple",
+                  "sizePrice": 270
                 }
               ]
             },
             {
-              "mealName" : "Cappuccino",
-              "sizes" : [
+              "mealName": "Cappuccino",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 230
+                  "sizeName": "Single",
+                  "sizePrice": 230
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 280
+                  "sizeName": "Double",
+                  "sizePrice": 280
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 320
+                  "sizeName": "Triple",
+                  "sizePrice": 320
                 }
               ]
             },
             {
-              "mealName" : "Caffé Latte",
-              "sizes" : [
+              "mealName": "Caffé Latte",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 250
+                  "sizeName": "Single",
+                  "sizePrice": 250
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 300
+                  "sizeName": "Double",
+                  "sizePrice": 300
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 320
+                  "sizeName": "Triple",
+                  "sizePrice": 320
                 }
               ]
             },
             {
-              "mealName" : "Vanilla Latte",
-              "sizes" : [
+              "mealName": "Vanilla Latte",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 270
+                  "sizeName": "Single",
+                  "sizePrice": 270
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 330
+                  "sizeName": "Double",
+                  "sizePrice": 330
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 370
+                  "sizeName": "Triple",
+                  "sizePrice": 370
                 }
               ]
             },
             {
-              "mealName" : "Mocha",
-              "sizes" : [
+              "mealName": "Mocha",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 270
+                  "sizeName": "Single",
+                  "sizePrice": 270
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 330
+                  "sizeName": "Double",
+                  "sizePrice": 330
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 370
+                  "sizeName": "Triple",
+                  "sizePrice": 370
                 }
               ]
             },
             {
-              "mealName" : "Peppermint Mocha",
-              "sizes" : [
+              "mealName": "Peppermint Mocha",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 270
+                  "sizeName": "Single",
+                  "sizePrice": 270
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 330
+                  "sizeName": "Double",
+                  "sizePrice": 330
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 370
+                  "sizeName": "Triple",
+                  "sizePrice": 370
                 }
               ]
             },
             {
-              "mealName" : "White Chocolate Mocha",
-              "sizes" : [
+              "mealName": "White Chocolate Mocha",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 270
+                  "sizeName": "Single",
+                  "sizePrice": 270
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 330
+                  "sizeName": "Double",
+                  "sizePrice": 330
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 370
+                  "sizeName": "Triple",
+                  "sizePrice": 370
                 }
               ]
             },
             {
-              "mealName" : "Malindi Macchiato",
-              "sizes" : [
+              "mealName": "Malindi Macchiato",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 270
+                  "sizeName": "Single",
+                  "sizePrice": 270
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 330
+                  "sizeName": "Double",
+                  "sizePrice": 330
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 370
+                  "sizeName": "Triple",
+                  "sizePrice": 370
                 }
               ]
             },
             {
-              "mealName" : "Caramel Macchiato",
-              "sizes" : [
+              "mealName": "Caramel Macchiato",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 270
+                  "sizeName": "Single",
+                  "sizePrice": 270
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 330
+                  "sizeName": "Double",
+                  "sizePrice": 330
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 370
+                  "sizeName": "Triple",
+                  "sizePrice": 370
                 }
               ]
             }
@@ -355,117 +354,117 @@
         },
         {
           "categoryName": "Tea & Chocolate",
-          "meals" : [
+          "meals": [
             {
-              "mealName" : "Regular / Masala Tea",
-              "sizes" : [
+              "mealName": "Regular / Masala Tea",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 170
+                  "sizeName": "Single",
+                  "sizePrice": 170
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 210
+                  "sizeName": "Double",
+                  "sizePrice": 210
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 240
+                  "sizeName": "Triple",
+                  "sizePrice": 240
                 }
               ]
             },
             {
-              "mealName" : "Green / Herbal Tea",
-              "sizes" : [
+              "mealName": "Green / Herbal Tea",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 170
+                  "sizeName": "Single",
+                  "sizePrice": 170
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 210
+                  "sizeName": "Double",
+                  "sizePrice": 210
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 240
+                  "sizeName": "Triple",
+                  "sizePrice": 240
                 }
               ]
             },
             {
-              "mealName" : "Malindi Chai Latte",
-              "sizes" : [
+              "mealName": "Malindi Chai Latte",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 260
+                  "sizeName": "Single",
+                  "sizePrice": 260
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 310
+                  "sizeName": "Double",
+                  "sizePrice": 310
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 340
+                  "sizeName": "Triple",
+                  "sizePrice": 340
                 }
               ]
             },
             {
-              "mealName" : "Hot Chocolate",
-              "sizes" : [
+              "mealName": "Hot Chocolate",
+              "sizes": [
                 {
-                  "sizeName" : "Single",
-                  "sizePrice" : 220
+                  "sizeName": "Single",
+                  "sizePrice": 220
                 },
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 280
+                  "sizeName": "Double",
+                  "sizePrice": 280
                 },
                 {
-                  "sizeName" : "Triple",
-                  "sizePrice" : 320
+                  "sizeName": "Triple",
+                  "sizePrice": 320
                 }
               ]
             },
             {
-              "mealName" : "Java Dawa",
-              "sizes" : [
+              "mealName": "Java Dawa",
+              "sizes": [
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 220
+                  "sizeName": "Double",
+                  "sizePrice": 220
                 }
               ]
             },
             {
-              "mealName" : "Tea Pot",
-              "sizes" : [
+              "mealName": "Tea Pot",
+              "sizes": [
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 280
+                  "sizeName": "Double",
+                  "sizePrice": 280
                 }
               ]
             },
             {
-              "mealName" : "Green Tea Pot",
-              "sizes" : [
+              "mealName": "Green Tea Pot",
+              "sizes": [
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 280
+                  "sizeName": "Double",
+                  "sizePrice": 280
                 }
               ]
             },
             {
-              "mealName" : "Moroccan Tea Pot",
-              "sizes" : [
+              "mealName": "Moroccan Tea Pot",
+              "sizes": [
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 280
+                  "sizeName": "Double",
+                  "sizePrice": 280
                 }
               ]
             },
             {
-              "mealName" : "Herbal Tea Pot",
-              "sizes" : [
+              "mealName": "Herbal Tea Pot",
+              "sizes": [
                 {
-                  "sizeName" : "Double",
-                  "sizePrice" : 280
+                  "sizeName": "Double",
+                  "sizePrice": 280
                 }
               ]
             }
@@ -474,286 +473,366 @@
       ]
     },
     {
-      "name" : "Drinks",
-      "categories" : [
+      "name": "Drinks",
+      "categories": [
         {
-          "categoryName" : "Soda & Water",
-          "meals" : [
+          "categoryName": "Soda & Water",
+          "meals": [
             {
-              "mealName" : "Soda",
-              "mealPrice" : 160
+              "mealName": "Soda",
+              "mealPrice": 160
             },
             {
-              "mealName" : "Diet Soda",
-              "mealPrice" : 190
+              "mealName": "Diet Soda",
+              "mealPrice": 190
             },
             {
-              "mealName" : "Mineral Water (Still) 500ml",
-              "mealPrice" : 170
+              "mealName": "Mineral Water (Still) 500ml",
+              "mealPrice": 170
             },
             {
-              "mealName" : "Mineral Water (Still) 1000ml",
-              "mealPrice" : 260
+              "mealName": "Mineral Water (Still) 1000ml",
+              "mealPrice": 260
             },
             {
-              "mealName" : "Mineral Water (Sparkling) 500ml",
-              "mealPrice" : 190
+              "mealName": "Mineral Water (Sparkling) 500ml",
+              "mealPrice": 190
             }
           ]
         },
         {
-          "categoryName" : "Java Shakes",
-          "meals" : [
+          "categoryName": "Java Shakes",
+          "meals": [
             {
-              "mealName" : "Classic",
-              "mealPrice" : 420
+              "mealName": "Classic",
+              "mealPrice": 420
             },
             {
-              "mealName" : "Gourmet",
-              "mealPrice" : 440
+              "mealName": "Gourmet",
+              "mealPrice": 440
             },
             {
-              "mealName" : "Next Level Shakes",
-              "mealPrice" : 460
+              "mealName": "Next Level Shakes",
+              "mealPrice": 460
             }
           ]
         },
         {
-          "categoryName" : "Super Smoothies",
-          "meals" : [
+          "categoryName": "Super Smoothies",
+          "meals": [
             {
-              "mealName" : "Strawberry Splash",
-              "mealPrice" : 380
+              "mealName": "Strawberry Splash",
+              "mealPrice": 380
             },
             {
-              "mealName" : "Banana Rama",
-              "mealPrice" : 380
+              "mealName": "Banana Rama",
+              "mealPrice": 380
             },
             {
-              "mealName" : "Mango Mania",
-              "mealPrice" : 380
+              "mealName": "Mango Mania",
+              "mealPrice": 380
             },
             {
-              "mealName" : "Tropical Mix",
-              "mealPrice" : 380
+              "mealName": "Tropical Mix",
+              "mealPrice": 380
             },
             {
-              "mealName" : "Pink Panther",
-              "mealPrice" : 380
+              "mealName": "Pink Panther",
+              "mealPrice": 380
             },
             {
-              "mealName" : "Green Smoothie",
-              "mealPrice" : 380
+              "mealName": "Green Smoothie",
+              "mealPrice": 380
             },
             {
-              "mealName" : "Tropical Thunder",
-              "mealPrice" : 380
+              "mealName": "Tropical Thunder",
+              "mealPrice": 380
             },
             {
-              "mealName" : "Fruity Madness Slushy",
-              "mealPrice" : 380
+              "mealName": "Fruity Madness Slushy",
+              "mealPrice": 380
             }
           ]
         },
         {
-          "categoryName" : "Iced Tea",
-          "meals" : [
+          "categoryName": "Iced Tea",
+          "meals": [
             {
-              "mealName" : "Iced Tea",
-              "mealPrice" : 240
+              "mealName": "Iced Tea",
+              "mealPrice": 240
             },
             {
-              "mealName" : "Iced Lemon & Ginger",
-              "mealPrice" : 240
+              "mealName": "Iced Lemon & Ginger",
+              "mealPrice": 240
             },
             {
-              "mealName" : "Iced Herbal Tea",
-              "mealPrice" : 240
+              "mealName": "Iced Herbal Tea",
+              "mealPrice": 240
             },
             {
-              "mealName" : "Iced Arnold Palmer",
-              "mealPrice" : 280
+              "mealName": "Iced Arnold Palmer",
+              "mealPrice": 280
             },
             {
-              "mealName" : "Iced Tea with Fresh Juice",
-              "mealPrice" : 300
+              "mealName": "Iced Tea with Fresh Juice",
+              "mealPrice": 300
             }
           ]
         },
         {
-          "categoryName" : "Iced Coffee",
-          "meals" : [
+          "categoryName": "Iced Coffee",
+          "meals": [
             {
-              "mealName" : "Iced Coffee",
-              "mealPrice" : 240
+              "mealName": "Iced Coffee",
+              "mealPrice": 240
             },
             {
-              "mealName" : "Iced Latte",
-              "mealPrice" : 330
+              "mealName": "Iced Latte",
+              "mealPrice": 330
             },
             {
-              "mealName" : "Iced Vanilla Latte",
-              "mealPrice" : 330
+              "mealName": "Iced Vanilla Latte",
+              "mealPrice": 330
             },
             {
-              "mealName" : "Iced Mocha",
-              "mealPrice" : 340
+              "mealName": "Iced Mocha",
+              "mealPrice": 340
             },
             {
-              "mealName" : "Iced White Chocolate Mocha",
-              "mealPrice" : 340
+              "mealName": "Iced White Chocolate Mocha",
+              "mealPrice": 340
             },
             {
-              "mealName" : "Iced Malindi Macchiato",
-              "mealPrice" : 340
+              "mealName": "Iced Malindi Macchiato",
+              "mealPrice": 340
             },
             {
-              "mealName" : "Iced Caramel Macchiato",
-              "mealPrice" : 340
+              "mealName": "Iced Caramel Macchiato",
+              "mealPrice": 340
             }
           ]
         },
         {
-          "categoryName" : "Fresh Juices",
-          "meals" : [
+          "categoryName": "Fresh Juices",
+          "meals": [
             {
-              "mealName" : "Minty Pineade",
-              "sizes" : [
+              "mealName": "Minty Pineade",
+              "sizes": [
                 {
-                  "sizeName" : "Small",
-                  "sizePrice" : 230
+                  "sizeName": "Small",
+                  "sizePrice": 230
                 },
                 {
-                  "sizeName" : "Large",
-                  "sizePrice" : 300
+                  "sizeName": "Large",
+                  "sizePrice": 300
                 }
               ]
             },
             {
-              "mealName" : "Pineapple",
-              "sizes" : [
+              "mealName": "Pineapple",
+              "sizes": [
                 {
-                  "sizeName" : "Small",
-                  "sizePrice" : 240
+                  "sizeName": "Small",
+                  "sizePrice": 240
                 },
                 {
-                  "sizeName" : "Large",
-                  "sizePrice" : 310
+                  "sizeName": "Large",
+                  "sizePrice": 310
                 }
               ]
             },
             {
-              "mealName" : "Orange",
-              "sizes" : [
+              "mealName": "Orange",
+              "sizes": [
                 {
-                  "sizeName" : "Small",
-                  "sizePrice" : 240
+                  "sizeName": "Small",
+                  "sizePrice": 240
                 },
                 {
-                  "sizeName" : "Large",
-                  "sizePrice" : 310
+                  "sizeName": "Large",
+                  "sizePrice": 310
                 }
               ]
             },
             {
-              "mealName" : "Mango",
-              "sizes" : [
+              "mealName": "Mango",
+              "sizes": [
                 {
-                  "sizeName" : "Small",
-                  "sizePrice" : 240
+                  "sizeName": "Small",
+                  "sizePrice": 240
                 },
                 {
-                  "sizeName" : "Large",
-                  "sizePrice" : 310
+                  "sizeName": "Large",
+                  "sizePrice": 310
                 }
               ]
             },
             {
-              "mealName" : "Passion",
-              "sizes" : [
+              "mealName": "Passion",
+              "sizes": [
                 {
-                  "sizeName" : "Small",
-                  "sizePrice" : 240
+                  "sizeName": "Small",
+                  "sizePrice": 240
                 },
                 {
-                  "sizeName" : "Large",
-                  "sizePrice" : 310
+                  "sizeName": "Large",
+                  "sizePrice": 310
                 }
               ]
             },
             {
-              "mealName" : "Tropical Mix",
-              "sizes" : [
+              "mealName": "Tropical Mix",
+              "sizes": [
                 {
-                  "sizeName" : "Small",
-                  "sizePrice" : 240
+                  "sizeName": "Small",
+                  "sizePrice": 240
                 },
                 {
-                  "sizeName" : "Large",
-                  "sizePrice" : 310
+                  "sizeName": "Large",
+                  "sizePrice": 310
                 }
               ]
             },
             {
-              "mealName" : "Beetroot Punch",
-              "sizes" : [
+              "mealName": "Beetroot Punch",
+              "sizes": [
                 {
-                  "sizeName" : "Small",
-                  "sizePrice" : 240
+                  "sizeName": "Small",
+                  "sizePrice": 240
                 },
                 {
-                  "sizeName" : "Large",
-                  "sizePrice" : 310
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "categoryName" : "Freshly Squeezed Lemonades",
-          "meals" : [
-            {
-              "mealName" : "Classic*",
-              "sizes" : [
-                {
-                  "sizeName" : "Small",
-                  "sizePrice" : 210
-                },
-                {
-                  "sizeName" : "Large",
-                  "sizePrice" : 280
-                }
-              ]
-            },
-            {
-              "mealName" : "Strawberry Lemonade",
-              "sizes" : [
-                {
-                  "sizeName" : "Small",
-                  "sizePrice" : 230
-                },
-                {
-                  "sizeName" : "Large",
-                  "sizePrice" : 300
+                  "sizeName": "Large",
+                  "sizePrice": 310
                 }
               ]
             }
           ]
         },
         {
-          "categoryName" : "Coladas",
-          "meals" : [
+          "categoryName": "Freshly Squeezed Lemonades",
+          "meals": [
             {
-              "mealName" : "Pineapple",
-              "mealPrice" : 430
+              "mealName": "Classic*",
+              "sizes": [
+                {
+                  "sizeName": "Small",
+                  "sizePrice": 210
+                },
+                {
+                  "sizeName": "Large",
+                  "sizePrice": 280
+                }
+              ]
             },
             {
-              "mealName" : "Passion",
-              "mealPrice" : 430
+              "mealName": "Strawberry Lemonade",
+              "sizes": [
+                {
+                  "sizeName": "Small",
+                  "sizePrice": 230
+                },
+                {
+                  "sizeName": "Large",
+                  "sizePrice": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "categoryName": "Coladas",
+          "meals": [
+            {
+              "mealName": "Pineapple",
+              "mealPrice": 430
             },
             {
-              "mealName" : "Minty",
-              "mealPrice" : 430
+              "mealName": "Passion",
+              "mealPrice": 430
+            },
+            {
+              "mealName": "Minty",
+              "mealPrice": 430
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bakery",
+      "categories": [
+        {
+          "categoryName": "Baked goods",
+          "meals": [
+            {
+              "mealName": "Choc Chip Cookie",
+              "mealPrice": 170
+            },
+            {
+              "mealName": "Banana Bread",
+              "mealPrice": 180
+            },
+            {
+              "mealName": "Assorted Scones",
+              "mealPrice": 180
+            },
+            {
+              "mealName": "Brownie",
+              "mealPrice": 190
+            },
+            {
+              "mealName": "Plain Croissant",
+              "mealPrice": 200
+            },
+            {
+              "mealName": "Assorted Muffins",
+              "mealPrice": 210
+            },
+            {
+              "mealName": "Cinnamon Roll",
+              "mealPrice": 220
+            },
+            {
+              "mealName": "Chocolate Croissant",
+              "mealPrice": 230
+            }
+          ]
+        },
+        {
+          "categoryName": "Pies",
+          "meals": [
+            {
+              "mealName": "Chicken Pie",
+              "mealPrice": 320
+            },
+            {
+              "mealName": "Steak Pie",
+              "mealPrice": 330
+            },
+            {
+              "mealName": "Assorted Scones",
+              "mealPrice": 180
+            }
+          ]
+        },
+        {
+          "categoryName": "Cakes",
+          "meals": [
+            {
+              "mealName": "Apple Cinnamon Cake",
+              "mealPrice": 190
+            },
+            {
+              "mealName": "Black Forest Cake",
+              "mealPrice": 370
+            },
+            {
+              "mealName": "Chocolate Fudge Cake",
+              "mealPrice": 370
+            },
+            {
+              "mealName": "Carrot Cake",
+              "mealPrice": 370
             }
           ]
         }

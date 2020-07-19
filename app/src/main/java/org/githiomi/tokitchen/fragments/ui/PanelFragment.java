@@ -30,11 +30,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link PanelFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class PanelFragment extends Fragment {
 
     //    TAG
@@ -64,7 +59,7 @@ public class PanelFragment extends Fragment {
     // For the list of barista sizes and prices
     private List<BaristaSizes> baristaSizesList;
     // For the images
-    private int[] mainCategoryImages = {R.drawable.breakfast, R.drawable.lunchanddinner, R.drawable.barista, R.drawable.drinks};
+    private int[] mainCategoryImages = {R.drawable.breakfast, R.drawable.lunchanddinner, R.drawable.barista, R.drawable.drinks, R.drawable.bakery};
 
     public PanelFragment() {
         // Required empty public constructor
@@ -147,68 +142,10 @@ public class PanelFragment extends Fragment {
                     String bCategoryName = mealSubCategories.getString(forTheSubCategories);
                     Log.d(TAG, categoryName + " categories: " + bCategoryName);
 
-//                    if (bCategoryName.equals("Coffee & Espresso")) {
-//
-//                        baristaSubCategoryList = new ArrayList();
-//
-//                        // To get the meals in the sub category
-//                        String forTheMealInSubCategory = "meals";
-//                        JSONArray coffeeAndEspressos = mealSubCategories.getJSONArray(forTheMealInSubCategory);
-//
-//                        int lengthOfCoffeeAndEsp = coffeeAndEspressos.length();
-//
-//                        baristaTypeList = new ArrayList();
-//                        for (int z = 0; z < lengthOfCoffeeAndEsp; z += 1) {
-//
-//                            JSONObject coffeeAndEspresso = (JSONObject) coffeeAndEspressos.get(z);
-//
-//                            String toGetCoffeeAndEspresso = "mealName";
-//                            String coffeeAndE = coffeeAndEspresso.getString(toGetCoffeeAndEspresso);
-//
-//                            Log.d(TAG, "readJsonFile: Coffee And Espresso: --------------- " + coffeeAndE);
-//
-//
-//                            String forTheSizesOfCAE = "sizes";
-//                            JSONArray forTheSizesOfCAEArray = coffeeAndEspresso.getJSONArray(forTheSizesOfCAE);
-//
-//                            int sizeOfCA = forTheSizesOfCAEArray.length();
-//
-//                            baristaSizesList = new ArrayList();
-//                            for (int x = 0; x < sizeOfCA; x += 1) {
-//
-//                                JSONObject theSizes = (JSONObject) forTheSizesOfCAEArray.get(x);
-//
-//                                String size = theSizes.getString("sizeName");
-//                                int sizePrice = theSizes.getInt("sizePrice");
-//
-//                                // Creating a new barista sizes list
-//                                BaristaSizes baristaSize = new BaristaSizes(size, sizePrice);
-//                                baristaSizesList.add(baristaSize);
-//
-//                                Log.d(TAG, "readJsonFile: One of the sizes for the " + coffeeAndE + " is: " + size + " that costs " + sizePrice);
-//
-//                            }
-//
-//                            // Creating the barista type objects
-//                            BaristaType baristaType = new BaristaType(coffeeAndE, baristaSizesList);
-//                            baristaTypeList.add(baristaType);
-//
-//                        }
-//
-//                        // Creating the new barista category object
-//                        BaristaCategory baristaCategory = new BaristaCategory(bCategoryName, baristaTypeList, false);
-//                        baristaSubCategoryList.add(baristaCategory);
-//
-//                        Log.d(TAG, "readJsonFile: The baristaSubCategoryList looks like: " + baristaSubCategoryList + " eg: "
-//                                            + baristaSubCategoryList.get(1).getBaristaName() + ", " + baristaSubCategoryList.get(0).getBaristaTypes());
-//
-//                    }
-
                     // Adding the sub category name to the array list
                     subCategoryList.add(bCategoryName);
 
                 }
-
 
                 // To create the main category objects
                 int mainCategoryImage = mainCategoryImages[i];
@@ -217,7 +154,6 @@ public class PanelFragment extends Fragment {
                 mainCategoryList.add(mainCategoryItem);
 
                 Log.d(TAG, "readJsonFile: One of the categories is: ---------- " + categoryName);
-
 
                 // Method to pass the meals to the adapter
                 Log.d(TAG, "readJsonFile: The array passed to the adapter is: --------- " + mainCategoryList);
