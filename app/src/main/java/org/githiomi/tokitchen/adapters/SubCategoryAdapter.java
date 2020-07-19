@@ -150,6 +150,12 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
                 toReplace(drinksFragment);
 
             }
+            else if ( currentSubCategory.equals("Baked goods") ) {
+
+                DrinksFragment drinksFragment = DrinksFragment.newInstance(currentSubCategory);
+                toReplace(drinksFragment);
+
+            }
             else {
 
                 ImageHolderFragment imageHolderFragment = ImageHolderFragment.newInstance();

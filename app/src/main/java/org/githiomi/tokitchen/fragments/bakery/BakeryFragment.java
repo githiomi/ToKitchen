@@ -1,4 +1,4 @@
-package org.githiomi.tokitchen.fragments.drinks;
+package org.githiomi.tokitchen.fragments.bakery;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,7 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import org.githiomi.tokitchen.R;
+import org.githiomi.tokitchen.adapters.bakery.BakeryTypeAdapter;
 import org.githiomi.tokitchen.adapters.drinks.DrinksTypeAdapter;
+import org.githiomi.tokitchen.models.Bakery.BakedGoods;
 import org.githiomi.tokitchen.models.Constants;
 import org.githiomi.tokitchen.models.Drinks.DrinksCategory;
 import org.githiomi.tokitchen.models.Drinks.DrinksCategoryTypes;
@@ -27,41 +29,39 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+public class BakeryFragment extends Fragment {
 
-public class DrinksFragment extends Fragment {
+    //    TAG
+    private static final String TAG = BakeryFragment.class.getSimpleName();
 
-    // TAG
-    private static final String TAG = DrinksFragment.class.getSimpleName();
+    //    Widgets
+    @BindView(R.id.bakeryRecyclerView)
+    RecyclerView wBakeryRecyclerView;
 
-    // Widget
-    @BindView(R.id.drinksRecyclerView)
-    RecyclerView wDrinksRecyclerView;
-
-    // Local Variables
-    // For the type of drink passed in
-    private String drinksType;
+    //    Local variables
+    // For the adapter
+    private BakeryTypeAdapter bakeryTypeAdapter;
+    // For the string passed in (bakery sub category)
+    private String bakerySubCategory;
     // For the adapter
     private DrinksTypeAdapter drinksTypeAdapter;
     // For the main categories
     private List<String> categoryNames;
     // For the list of main category objects
     private List<MainCategory> mainCategoryList;
-    // For the list of sub categories
-    private List<DrinksCategory> drinksCategoryList;
     // For the other list
     private List<String> subCategoryList;
-    // For the list of barista types
-    private List<DrinksCategoryTypes> drinksCategoryTypesList;
+    // For the list of baked goods
+    private List<BakedGoods> bakedGoodsList;
 
-    public DrinksFragment() {
+    public BakeryFragment() {
         // Required empty public constructor
     }
 
-    // TODO: Rename and change types and number of parameters
-    public static DrinksFragment newInstance(String drinkTypeName) {
-        DrinksFragment fragment = new DrinksFragment();
+    public static BakeryFragment newInstance(String bakerySubCategory) {
+        BakeryFragment fragment = new BakeryFragment();
         Bundle args = new Bundle();
-        args.putString(Constants.DRINK_TYPE_NAME, drinkTypeName);
+        args.putString(Constants.BAKERY_TYPE_NAME, bakerySubCategory);
         fragment.setArguments(args);
         return fragment;
     }
@@ -70,7 +70,7 @@ public class DrinksFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            drinksType = getArguments().getString(Constants.DRINK_TYPE_NAME);
+            bakerySubCategory = getArguments().getString(Constants.BAKERY_TYPE_NAME);
         }
     }
 
@@ -78,20 +78,20 @@ public class DrinksFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View mainView = inflater.inflate(R.layout.fragment_drinks, container, false);
+        View mainView = inflater.inflate(R.layout.fragment_bakery, container, false);
 
-        // Binding widgets
+        // Binding views using butter knife
         ButterKnife.bind(this, mainView);
 
-        // Method call to extract data from source.json
-        extractData(drinksType);
+        // Method call to get data from the source.json file
+        extractData(bakerySubCategory);
 
         return mainView;
     }
 
-    // Method implementation for the extraction of data from source.json
-    private void extractData(String drinkType) {
-        Log.d(TAG, "extractData: " + drinkType + " fragment init");
+    // Method implementation to get data from the source.json file
+    private void extractData(String bakerySubCategory) {
+        Log.d(TAG, "extractData: " + bakerySubCategory + " fragment init");
 
         try {
 //            Locating the file to read the data
@@ -131,54 +131,41 @@ public class DrinksFragment extends Fragment {
                     String subCategoryName = mealSubCategories.getString(forTheSubCategories);
                     Log.d(TAG, categoryName + " categories: " + subCategoryName);
 
-                    if (subCategoryName.equals(drinkType)) {
+                    if (subCategoryName.equals(bakerySubCategory)) {
 
-                        drinksCategoryList = new ArrayList();
+                        bakedGoodsList = new ArrayList();
 
                         // To get the meals in the sub category
                         String forTheDrinksInSubCategory = "meals";
                         JSONArray javaDrinks = mealSubCategories.getJSONArray(forTheDrinksInSubCategory);
 
-                        if ( javaDrinks != null ) {
 
-                            int lengthOfJavaDrinks = javaDrinks.length();
+                        int lengthOfJavaDrinks = javaDrinks.length();
 
-                            drinksCategoryTypesList = new ArrayList();
-                            for (int z = 0; z < lengthOfJavaDrinks; z += 1) {
+                        for (int z = 0; z < lengthOfJavaDrinks; z += 1) {
 
-                                JSONObject javaDrink = (JSONObject) javaDrinks.get(z);
+                            JSONObject javaDrink = (JSONObject) javaDrinks.get(z);
 
-                                String toGetDrinkName = "mealName";
-                                String javaDrinkName = javaDrink.getString(toGetDrinkName);
+                            String toGetBakedGoodName = "mealName";
+                            String bakedGoodName = javaDrink.getString(toGetBakedGoodName);
 
 
-                                String toGetDrinkPrice = "mealPrice";
-                                int javaDrinkPrice = javaDrink.getInt(toGetDrinkPrice);
+                            String toGetBakedGoodPrice = "mealPrice";
+                            int bakedGoodPrice = javaDrink.getInt(toGetBakedGoodPrice);
 
-                                Log.d(TAG, "readJsonFile: Soda And Water: --------------- " + javaDrinkName + " that will cost: Ksh." + javaDrinkPrice);
+                            Log.d(TAG, "readJsonFile: Baked Good: --------------- " + bakedGoodName + " that will cost: Ksh." + bakedGoodPrice);
 
-                                // Creating the barista type objects
-                                DrinksCategoryTypes drinksCategoryType = new DrinksCategoryTypes(javaDrinkName, javaDrinkPrice);
-                                drinksCategoryTypesList.add(drinksCategoryType);
+                            // Creating the bakery type objects
+                            BakedGoods bakedGood = new BakedGoods(bakedGoodName, bakedGoodPrice);
+                            bakedGoodsList.add(bakedGood);
 
-                            }
                         }
-
-                        // Creating the drinks category list that holds soda and water and its meals
-                        DrinksCategory drinksCategory = new DrinksCategory(subCategoryName, drinksCategoryTypesList);
-                        drinksCategoryList.add(drinksCategory);
-
                     }
-
-
                 }
 
-                Log.d(TAG, "readJsonFile: One of the categories is: ---------- " + categoryName);
-
-
                 // Method to pass the meals to the adapter
-                Log.d(TAG, "readJsonFile: The array passed to the barista type adapter is: --------- " + drinksCategoryTypesList);
-                passToAdapter(drinksCategoryTypesList);
+                Log.d(TAG, "readJsonFile: The array passed to the barista type adapter is: --------- " + bakedGoodsList);
+                passToAdapter(bakedGoodsList);
 
             }
         } catch (Exception ex) {
@@ -187,19 +174,19 @@ public class DrinksFragment extends Fragment {
 
     }
 
-    // Method implementation of the function that will pass data to the adapter
-    private void passToAdapter(List<DrinksCategoryTypes> drinksCategoryTypesToAdapter){
-        Log.d(TAG, "passToAdapter: drinksCategoryTypesListToAdapter init");
+    // This is the method implementation that will get the list to the adapter
+    private void passToAdapter(List<BakedGoods> bakedGoodsListToAdapter) {
+        Log.d(TAG, "passToAdapter: bakedGoodsListToAdapter init");
 
         Context context = getContext();
 
-        drinksTypeAdapter = new DrinksTypeAdapter(drinksCategoryTypesToAdapter, context);
+        bakeryTypeAdapter = new BakeryTypeAdapter(bakedGoodsListToAdapter, context);
 
-        wDrinksRecyclerView.setAdapter(drinksTypeAdapter);
-        wDrinksRecyclerView.setLayoutManager(new LinearLayoutManager(context));
+        wBakeryRecyclerView.setAdapter(drinksTypeAdapter);
+        wBakeryRecyclerView.setLayoutManager(new LinearLayoutManager(context));
 
-        wDrinksRecyclerView.setHasFixedSize(true);
-        drinksTypeAdapter.notifyDataSetChanged();
+        wBakeryRecyclerView.setNestedScrollingEnabled(false);
+        bakeryTypeAdapter.notifyDataSetChanged();
 
     }
 }

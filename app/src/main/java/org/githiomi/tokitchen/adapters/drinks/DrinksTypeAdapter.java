@@ -38,7 +38,7 @@ public class DrinksTypeAdapter extends RecyclerView.Adapter<DrinksTypeAdapter.Dr
     @NonNull
     @Override
     public DrinksTypeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View mainView = LayoutInflater.from(parent.getContext()).inflate(R.layout.soda_water_item, parent, false);
+        View mainView = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_drink_item, parent, false);
         DrinksTypeViewHolder drinksTypeViewHolder = new DrinksTypeViewHolder(mainView);
         return drinksTypeViewHolder;
     }

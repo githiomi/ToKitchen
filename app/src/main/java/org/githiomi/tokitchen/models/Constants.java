@@ -13,6 +13,9 @@ public class Constants {
     // This is the key for the string fragments will use to unwrap drink type names
     public static final String DRINK_TYPE_NAME = "Drink Type Name";
 
+    // This is the key for the string fragments will use to unwrap bakery type names
+    public static final String BAKERY_TYPE_NAME = "Bakery Type Name";
+
 //    Methods
     //    Method that will return data file location
     public static String loadJsonFromAssets(Context context) {
