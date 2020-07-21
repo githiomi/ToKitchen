@@ -232,10 +232,145 @@
           ]
         },
         {
-          "categoryName": "Burgers"
+          "categoryName": "Burgers",
+          "meals" : [
+            {
+              "mealName" : "Beef Burger",
+              "mealPrice" : 740
+            },
+            {
+              "mealName" : "Ben's Burger",
+              "mealPrice" : 880
+            },
+            {
+              "mealName" : "Bacon Cheese Burger",
+              "mealPrice" : 900
+            },
+            {
+              "mealName" : "Grilled Chicken Burger (Regular*)",
+              "mealPrice" : 730
+            },
+            {
+              "mealName" : "Grilled Chicken Burger (Spiced*)",
+              "mealPrice" : 730
+            }
+          ]
         },
         {
-          "categoryName": "Signature dishes"
+          "categoryName": "Signature dishes",
+          "meals" : [
+            {
+              "mealName" : "Breaded Fish",
+              "mealTypes" : [
+                {
+                  "typeName" : "+ Garden Salad & Chips",
+                  "typePrice" : 930
+                }
+              ]
+            },
+            {
+              "mealName" : "Grilled Fish",
+              "mealTypes" : [
+                {
+                  "typeName" : "+ Garden Salad & Chips",
+                  "typePrice" : 950
+                }
+              ]
+            },
+            {
+              "mealName" : "Quarter ( 1/4 ) Chicken",
+              "mealTypes" : [
+                {
+                  "typeName" : "+ Chips",
+                  "typePrice" : 500
+                }
+              ]
+            },
+            {
+              "mealName" : "Java Special Chicken Curry",
+              "mealTypes" : [
+                {
+                  "typeName" : "+ Chapati",
+                  "typePrice" : 880
+                },
+                {
+                  "typeName" : "+ Rice & Salsa",
+                  "typePrice" : 880
+                }
+              ]
+            },
+            {
+              "mealName" : "Grilled Chicken Breast",
+              "mealTypes" : [
+                {
+                  "typeName" : "+ Garden Salad & Chips",
+                  "typePrice" : 980
+                }
+              ]
+            },
+            {
+              "mealName" : "Roast Half Chicken",
+              "mealTypes" : [
+                {
+                  "typeName" : "+ Garden Salad & Chips",
+                  "typePrice" : 1000
+                }
+              ]
+            },
+            {
+              "mealName" : "Grilled Beef Fillet Steak",
+              "mealTypes" : [
+                {
+                  "typeName" : "+ Garden Salad & Chips",
+                  "typePrice" : 1060
+                }
+              ]
+            },
+            {
+              "mealName" : "Pork Spare Ribs",
+              "mealTypes" : [
+                {
+                  "typeName" : "+ Garden Salad & Chips",
+                  "typePrice" : 1100
+                }
+              ]
+            },
+            {
+              "mealName" : "Homestyle Chicken Dhania",
+              "mealTypes" : [
+                {
+                  "typeName" : "+ Chapati & Kales",
+                  "typePrice" : 860
+                },
+                {
+                  "typeName" : "+ Ugali & Kales",
+                  "typePrice" : 860
+                }
+              ]
+            },
+            {
+              "mealName" : "Swahili Coconut Fish Curry",
+              "mealTypes" : [
+                {
+                  "typeName" : "+ Chapati",
+                  "typePrice" : 950
+                },
+                {
+                  "typeName" : "+ Rice & Salsa",
+                  "typePrice" : 950
+                }
+              ]
+            },
+            {
+              "mealName" : "Nyama Platter",
+              "mealTypes" : [
+                {
+                  "typeName" : "+ Garden Salad & Chips",
+                  "typePrice" : 1750
+                }
+              ]
+            }
+          ]
         }
       ]
     },

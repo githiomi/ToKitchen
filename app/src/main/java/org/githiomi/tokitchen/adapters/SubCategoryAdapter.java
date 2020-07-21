@@ -112,8 +112,20 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
             }
             else if ( currentSubCategory.equals("Wraps") ){
 
-                WrapsFragment wrapsFragment = WrapsFragment.newInstance();
+                WrapsFragment wrapsFragment = WrapsFragment.newInstance(currentSubCategory);
                 toReplace(wrapsFragment);
+
+            }
+            else if ( currentSubCategory.equals("Burgers") ){
+
+                WrapsFragment burgerFragment = WrapsFragment.newInstance(currentSubCategory);
+                toReplace(burgerFragment);
+
+            }
+            else if ( currentSubCategory.equals("Signature dishes") ){
+
+                LunchAndDinnerFragment signatureDishesFragment = LunchAndDinnerFragment.newInstance(currentSubCategory);
+                toReplace(signatureDishesFragment);
 
             }
             else  if ( currentSubCategory.equals("Coffee & Espresso") ){

@@ -36,6 +36,8 @@ public class WrapsFragment extends Fragment {
     @BindView(R.id.wrapsRecyclerView) RecyclerView wWrapsRecyclerView;
 
 //    Local variables
+    // For the category name
+    private String subCategoryName;
     // For the adapter
     private WrapsAdapter wrapsAdapter;
     // For the main categories
@@ -52,9 +54,10 @@ public class WrapsFragment extends Fragment {
     }
 
 
-    public static WrapsFragment newInstance() {
+    public static WrapsFragment newInstance(String subCategoryName) {
         WrapsFragment fragment = new WrapsFragment();
         Bundle args = new Bundle();
+        args.putString( Constants.LUNCH_AND_DINNER_TYPE_NAME, subCategoryName );
         fragment.setArguments(args);
         return fragment;
     }
@@ -63,6 +66,9 @@ public class WrapsFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
+
+            subCategoryName = getArguments().getString(Constants.LUNCH_AND_DINNER_TYPE_NAME);
+
         }
     }
 
@@ -76,13 +82,13 @@ public class WrapsFragment extends Fragment {
         ButterKnife.bind(this, wrapsFragmentView);
 
         // Method call to extract data
-        extractData();
+        extractData(subCategoryName);
 
         return wrapsFragmentView;
     }
 
 //    Method implementation to extract data
-    private void extractData() {
+    private void extractData(String categoryNameToFragment) {
         Log.d(TAG, "extractData: Wraps fragment init");
 
         try {
@@ -123,7 +129,7 @@ public class WrapsFragment extends Fragment {
                     String subCategoryName = mealSubCategories.getString(forTheSubCategories);
                     Log.d(TAG, categoryName + " categories: " + subCategoryName);
 
-                    if (subCategoryName.equals("Wraps")) {
+                    if (subCategoryName.equals(categoryNameToFragment)) {
 
                         // To get the meals in the sub category
                         String forTheWrapsCategory = "meals";

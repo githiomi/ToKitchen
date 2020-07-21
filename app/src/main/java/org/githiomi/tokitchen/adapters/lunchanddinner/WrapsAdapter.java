@@ -1,6 +1,7 @@
 package org.githiomi.tokitchen.adapters.lunchanddinner;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -73,6 +74,7 @@ public class WrapsAdapter extends RecyclerView.Adapter<WrapsAdapter.WrapsAdapter
 
         // Method implementation to bind data to view
         private void bindToView(Wraps wrap){
+            Log.d(TAG, "bindToView: Wrap adapter init");
 
             wMealName.setText(wrap.getWrapName());
 
