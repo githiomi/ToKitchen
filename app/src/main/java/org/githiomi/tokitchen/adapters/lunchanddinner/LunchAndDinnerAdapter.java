@@ -14,8 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.githiomi.tokitchen.R;
 import org.githiomi.tokitchen.adapters.spinners.LunchAndDinnerSpinner;
-import org.githiomi.tokitchen.adapters.spinners.SpinnerDropDownAdapter;
-import org.githiomi.tokitchen.models.Barista.BaristaSizes;
 import org.githiomi.tokitchen.models.LunchAndDinner.QuickBiteTypes;
 import org.githiomi.tokitchen.models.LunchAndDinner.QuickBites;
 

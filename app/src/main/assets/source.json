@@ -104,7 +104,25 @@
       "name": "Lunch & Dinner",
       "categories": [
         {
-          "categoryName": "Salads"
+          "categoryName": "Salads",
+          "meals" : [
+            {
+              "mealName" : "Garden Salad",
+              "mealPrice" : 400
+            },
+            {
+              "mealName" : "Grilled Chicken Strips Salad",
+              "mealPrice" : 640
+            },
+            {
+              "mealName" : "California Garden Salad",
+              "mealPrice" : 700
+            },
+            {
+              "mealName" : "Crispy Chicken Breast Salad",
+              "mealPrice" : 700
+            }
+          ]
         },
         {
           "categoryName": "Quick Bites",

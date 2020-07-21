@@ -17,6 +17,7 @@ import org.githiomi.tokitchen.R;
 import org.githiomi.tokitchen.fragments.bakery.BakeryFragment;
 import org.githiomi.tokitchen.fragments.baristas.CoffeeOrderFragment;
 import org.githiomi.tokitchen.fragments.lunchanddinner.LunchAndDinnerFragment;
+import org.githiomi.tokitchen.fragments.lunchanddinner.SaladFragment;
 import org.githiomi.tokitchen.fragments.ui.ImageHolderFragment;
 import org.githiomi.tokitchen.fragments.baristas.TeaOrderFragment;
 import org.githiomi.tokitchen.fragments.drinks.DrinksFragment;
@@ -89,7 +90,13 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
             String currentSubCategory = subCategoryNames.get(currentItem);
             Toast.makeText(context, currentSubCategory, Toast.LENGTH_SHORT).show();
 
-            if ( currentSubCategory.equals("Quick Bites") ){
+            if ( currentSubCategory.equals("Salads") ){
+
+                SaladFragment saladFragment = SaladFragment.newInstance();
+                toReplace(saladFragment);
+
+            }
+            else if ( currentSubCategory.equals("Quick Bites") ){
 
                 LunchAndDinnerFragment lunchAndDinnerFragment = LunchAndDinnerFragment.newInstance(currentSubCategory);
                 toReplace(lunchAndDinnerFragment);
