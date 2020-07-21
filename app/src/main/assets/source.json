@@ -186,10 +186,50 @@
           ]
         },
         {
-          "categoryName": "Sandwiches"
+          "categoryName": "Sandwiches",
+          "meals" :  [
+            {
+              "mealName" : "Avocado, Cheese & Tomato",
+              "mealPrice" : 480
+            },
+            {
+              "mealName" : "BBQ Chicken Club",
+              "mealPrice" : 540
+            },
+            {
+              "mealName" : "Roasted Turkey & Cheese",
+              "mealPrice" : 540
+            },
+            {
+              "mealName" : "Chicken & Cheese",
+              "mealPrice" : 540
+            },
+            {
+              "mealName" : "Grilled Chicken & Sundried Tomato",
+              "mealPrice" : 790
+            },
+            {
+              "mealName" : "Turkey & Bacon Club",
+              "mealPrice" : 790
+            }
+          ]
         },
         {
-          "categoryName": "Wraps"
+          "categoryName": "Wraps",
+          "meals" : [
+            {
+              "mealName" : "Halloumi & Avocado",
+              "mealPrice" : 700
+            },
+            {
+              "mealName" : "Chicken Fajita",
+              "mealPrice" : 800
+            },
+            {
+              "mealName" : "California Chicken",
+              "mealPrice" : 800
+            }
+          ]
         },
         {
           "categoryName": "Burgers"

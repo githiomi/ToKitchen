@@ -13,11 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import org.githiomi.tokitchen.R;
-import org.githiomi.tokitchen.adapters.lunchanddinner.SaladsAdapter;
+import org.githiomi.tokitchen.adapters.lunchanddinner.SandwichesAdapter;
 import org.githiomi.tokitchen.models.Constants;
-import org.githiomi.tokitchen.models.LunchAndDinner.QuickBiteTypes;
-import org.githiomi.tokitchen.models.LunchAndDinner.QuickBites;
 import org.githiomi.tokitchen.models.LunchAndDinner.Salads;
+import org.githiomi.tokitchen.models.LunchAndDinner.Sandwiches;
 import org.githiomi.tokitchen.models.MainCategory;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -28,34 +27,33 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SaladFragment extends Fragment {
+
+public class SandwichesFragment extends Fragment {
 
 //    TAG
-    private static final String TAG = SaladFragment.class.getSimpleName();
+    private static final String TAG = SandwichesFragment.class.getSimpleName();
 
 //    Widgets
-    @BindView(R.id.saladRecyclerView) RecyclerView wSaladRecyclerView;
+    @BindView(R.id.sandwichesRecyclerView) RecyclerView wSandwichesRecyclerView;
 
-//    Local Variables
+//    Local variables
     // For the adapter
-    private SaladsAdapter saladsAdapter;
-    // For the quick bite passed into the fragment
-    private String quickBite;
+    private SandwichesAdapter sandwichesAdapter;
     // For the main categories
     private List<String> categoryNames;
     // For the list of main category objects
     private List<MainCategory> mainCategoryList;
     // For the other list
     private List<String> subCategoryList;
-    // For the list of salad objects
-    private List<Salads> saladsList;
+    // For the list of sandwiches objects
+    private List<Sandwiches> sandwichesList;
 
-    public SaladFragment() {
+    public SandwichesFragment() {
         // Required empty public constructor
     }
 
-    public static SaladFragment newInstance() {
-        SaladFragment fragment = new SaladFragment();
+    public static SandwichesFragment newInstance() {
+        SandwichesFragment fragment = new SandwichesFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -72,21 +70,20 @@ public class SaladFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View saladFragmentView = inflater.inflate(R.layout.fragment_salad, container, false);
+        View sandwichesFragmentView = inflater.inflate(R.layout.fragment_sandwiches, container, false);
 
-        // Binding view with butter knife
-        ButterKnife.bind(this, saladFragmentView);
+        // Binding widgets
+        ButterKnife.bind(this, sandwichesFragmentView);
 
-        // Method call to extract data from the source.json file
+        // Method call to extract data
         extractData();
 
-        return saladFragmentView;
-
+        return sandwichesFragmentView;
     }
 
-    // Method implementation to extract data from the source.json file
+    // Method implementation extract data
     private void extractData() {
-        Log.d(TAG, "extractData: Salad fragment init");
+        Log.d(TAG, "extractData: Sandwiches fragment init");
 
         try {
 //            Locating the file to read the data
@@ -126,34 +123,33 @@ public class SaladFragment extends Fragment {
                     String subCategoryName = mealSubCategories.getString(forTheSubCategories);
                     Log.d(TAG, categoryName + " categories: " + subCategoryName);
 
-                    if (subCategoryName.equals("Salads")) {
+                    if (subCategoryName.equals("Sandwiches")) {
 
                         // To get the meals in the sub category
-                        String forTheSaladsCategory = "meals";
-                        JSONArray javaSalads = mealSubCategories.getJSONArray(forTheSaladsCategory);
+                        String forTheSandwichCategory = "meals";
+                        JSONArray javaSandwiches = mealSubCategories.getJSONArray(forTheSandwichCategory);
 
-                        int lengthOfSalads = javaSalads.length();
+                        int lengthOfSandwiches = javaSandwiches.length();
 
-                        saladsList = new ArrayList();
-                        for (int z = 0; z < lengthOfSalads; z += 1) {
+                        sandwichesList = new ArrayList();
+                        for (int z = 0; z < lengthOfSandwiches; z += 1) {
 
-                            JSONObject javaSalad = (JSONObject) javaSalads.get(z);
+                            JSONObject javaSandwich = (JSONObject) javaSandwiches.get(z);
 
-                            String toGetSaladName = "mealName";
-                            String saladName = javaSalad.getString(toGetSaladName);
+                            String toGetSandwichName = "mealName";
+                            String saladName = javaSandwich.getString(toGetSandwichName);
 
-                            String toGetSaladPrice = "mealPrice";
-                            int saladPrice = javaSalad.getInt(toGetSaladPrice);
-
+                            String toGetSandwichPrice = "mealPrice";
+                            int saladPrice = javaSandwich.getInt(toGetSandwichPrice);
 
                             // Creating the quick bite objects
-                            Salads salad = new Salads(saladName, saladPrice);
-                            saladsList.add(salad);
+                            Sandwiches sandwich = new Sandwiches(saladName, saladPrice);
+                            sandwichesList.add(sandwich);
 
                         }
 
                         // Passing the data to the adapter
-                        passToAdapter(saladsList);
+                        passToAdapter(sandwichesList);
 
                     }
                 }
@@ -164,20 +160,19 @@ public class SaladFragment extends Fragment {
 
     }
 
-    // Method implementation to pass the salads list to the adapter
-    private void passToAdapter(List<Salads> saladsListToAdapter){
-        Log.d(TAG, "passToAdapter: saladsListToAdapter init");
+
+    // Method implementation to pass data to adapter
+    private void passToAdapter(List<Sandwiches> sandwichesListToAdapter) {
+        Log.d(TAG, "passToAdapter: Sandwiches adapter init");
 
         Context context = getContext();
-        saladsAdapter = new SaladsAdapter(saladsListToAdapter, context);
+        sandwichesAdapter = new SandwichesAdapter(sandwichesListToAdapter, context);
 
-        wSaladRecyclerView.setAdapter(saladsAdapter);
-        wSaladRecyclerView.setLayoutManager(new LinearLayoutManager(context));
+        wSandwichesRecyclerView.setAdapter(sandwichesAdapter);
+        wSandwichesRecyclerView.setLayoutManager(new LinearLayoutManager(context));
 
-        wSaladRecyclerView.setHasFixedSize(true);
-        saladsAdapter.notifyDataSetChanged();
+        wSandwichesRecyclerView.setHasFixedSize(true);
+        sandwichesAdapter.notifyDataSetChanged();
 
     }
-
-
 }
