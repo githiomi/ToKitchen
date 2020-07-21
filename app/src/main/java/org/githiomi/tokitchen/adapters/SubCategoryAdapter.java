@@ -19,6 +19,7 @@ import org.githiomi.tokitchen.fragments.baristas.CoffeeOrderFragment;
 import org.githiomi.tokitchen.fragments.lunchanddinner.LunchAndDinnerFragment;
 import org.githiomi.tokitchen.fragments.lunchanddinner.SaladFragment;
 import org.githiomi.tokitchen.fragments.lunchanddinner.SandwichesFragment;
+import org.githiomi.tokitchen.fragments.lunchanddinner.WrapsFragment;
 import org.githiomi.tokitchen.fragments.ui.ImageHolderFragment;
 import org.githiomi.tokitchen.fragments.baristas.TeaOrderFragment;
 import org.githiomi.tokitchen.fragments.drinks.DrinksFragment;
@@ -107,6 +108,12 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
 
                 SandwichesFragment sandwichesFragment = SandwichesFragment.newInstance();
                 toReplace(sandwichesFragment);
+
+            }
+            else if ( currentSubCategory.equals("Wraps") ){
+
+                WrapsFragment wrapsFragment = WrapsFragment.newInstance();
+                toReplace(wrapsFragment);
 
             }
             else  if ( currentSubCategory.equals("Coffee & Espresso") ){
