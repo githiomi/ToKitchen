@@ -39,7 +39,7 @@ public class BreakfastWTAdapter extends RecyclerView.Adapter<BreakfastWTAdapter.
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View adapterView = LayoutInflater.from(parent.getContext()).inflate(R.layout.meal_order_item, parent, false);
+        View adapterView = LayoutInflater.from(parent.getContext()).inflate(R.layout.breakfast_type_item, parent, false);
         ViewHolder viewHolder = new ViewHolder(adapterView);
         return viewHolder;
     }

@@ -116,7 +116,7 @@ public class BreakfastWTFragment extends Fragment {
                         String subCategoryName = mealSubCategory.getString(forTheSubCategories);
                         Log.d(TAG, "extractData: category name: " + categoryName);
 
-                        if (categoryName.equals(breakfastWTName)) {
+                        if (subCategoryName.equals(breakfastWTName)) {
 
                             // init list of objects
                             breakfastWTList = new ArrayList();
@@ -141,7 +141,7 @@ public class BreakfastWTFragment extends Fragment {
                                 // Type list init
                                 breakfastTypeList = new ArrayList();
 
-                                for (int l = 0; l < lengthOfMealTypes; l = +1) {
+                                for (int l = 0; l < lengthOfMealTypes; l += 1) {
 
                                     // Single meal type
                                     JSONObject mealType = (JSONObject) mealTypes.get(l);
@@ -164,10 +164,10 @@ public class BreakfastWTFragment extends Fragment {
 
                             }
 
-                            // Passing this list to an adapter
-                            passToAdapter(breakfastWTList);
-
                         }
+
+                        // Passing this list to an adapter
+                        passToAdapter(breakfastWTList);
 
                     }
 
