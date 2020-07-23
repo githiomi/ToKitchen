@@ -19,6 +19,9 @@ public class Constants {
     // This is the key for the string fragments will use to unwrap quick bite type names
     public static final String LUNCH_AND_DINNER_TYPE_NAME = "Lunch And Dinner Type Name";
 
+    // This is the key for the string fragments will use to unwrap breakfast names
+    public static final String BREAKFAST_TYPE_NAME = "Breakfast Type Name";
+
 //    Methods
     //    Method that will return data file location
     public static String loadJsonFromAssets(Context context) {

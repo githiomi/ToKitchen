@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.lunchanddinner.SignatureDishesFragment">
+    tools:context=".fragments.breakfast.BreakfastWTFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/signatureDishesRecyclerView"
+        android:id="@+id/breakfastWTRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/white"

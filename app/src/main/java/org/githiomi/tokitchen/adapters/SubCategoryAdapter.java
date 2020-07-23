@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.githiomi.tokitchen.R;
 import org.githiomi.tokitchen.fragments.bakery.BakeryFragment;
 import org.githiomi.tokitchen.fragments.baristas.CoffeeOrderFragment;
+import org.githiomi.tokitchen.fragments.breakfast.BreakfastFragment;
+import org.githiomi.tokitchen.fragments.breakfast.BreakfastWTFragment;
 import org.githiomi.tokitchen.fragments.lunchanddinner.LunchAndDinnerFragment;
 import org.githiomi.tokitchen.fragments.lunchanddinner.SaladFragment;
 import org.githiomi.tokitchen.fragments.lunchanddinner.SandwichesFragment;
@@ -92,7 +94,19 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
             String currentSubCategory = subCategoryNames.get(currentItem);
             Toast.makeText(context, currentSubCategory, Toast.LENGTH_SHORT).show();
 
-            if ( currentSubCategory.equals("Salads") ){
+            if ( currentSubCategory.equals("Health Kick") ){
+
+                BreakfastFragment healthKick = BreakfastFragment.newInstance(currentSubCategory);
+                toReplace(healthKick);
+
+            }
+            else if ( currentSubCategory.equals("Sweet Tooth") ){
+
+                BreakfastWTFragment breakfastWTFragment = BreakfastWTFragment.newInstance(currentSubCategory);
+                toReplace(breakfastWTFragment);
+
+            }
+            else if ( currentSubCategory.equals("Salads") ){
 
                 SaladFragment saladFragment = SaladFragment.newInstance();
                 toReplace(saladFragment);

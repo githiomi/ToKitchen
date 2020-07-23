@@ -8,23 +8,23 @@
           "meals": [
             {
               "mealName": "Fruit Salad",
-              "description": "",
-              "price": 380
+              "mealPrice": 380
             },
             {
               "mealName": "Fruit Salad",
-              "description": "With yogurt honey and nuts",
-              "price": 490
+              "mealPrice": 490
             },
             {
               "mealName": "Hot Oatmeal Porridge",
-              "description": "With almonds, raisins & brown sugar",
-              "price": 440
+              "mealPrice": 440
             },
             {
-              "mealName": "Homemade Granola",
-              "description": "With milk or yogurt and choice of honey or strawberries",
-              "price": 500
+              "mealName": "Homemade Granola (Honey*)",
+              "mealPrice": 500
+            },
+            {
+              "mealName": "Homemade Granola (Strawberries*)",
+              "mealPrice": 500
             }
           ]
         },
@@ -33,18 +33,41 @@
           "meals": [
             {
               "mealName": "French Toast",
-              "description": "Single Brioche French Toast",
-              "price": 230
-            },
-            {
-              "mealName": "French Toast",
-              "description": "Brioche French Toast (Classic / Choc Chip / Strawberry Chocolate / Choco Banana)",
-              "price": 550
+              "types" : [
+                {
+                  "typeName" : "Classic",
+                  "typePrice" : 230
+                },
+                {
+                  "typeName" : "Choco Chip",
+                  "typePrice" : 230
+                },
+                {
+                  "typeName" : "Strawberry",
+                  "typePrice" : 230
+                },
+                {
+                  "typeName" : "Chocolate",
+                  "typePrice" : 230
+                },
+                {
+                  "typeName" : "Choco Banana",
+                  "typePrice" : 550
+                }
+              ]
             },
             {
               "mealName": "Pancake",
-              "description": "Single fluffy homemade pancake with butter & syrup",
-              "price": 260
+              "types" : [
+                {
+                  "typeName" : "Single Fluffy Pancake",
+                  "typePrice" : 260
+                },
+                {
+                  "typeName" : "Classic",
+                  "typePrice" : 550
+                }
+              ]
             },
             {
               "mealName": "Pancake",
