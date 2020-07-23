@@ -11,15 +11,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import org.githiomi.tokitchen.R;
+import org.githiomi.tokitchen.models.Breakfast.BreakfastType;
+import org.githiomi.tokitchen.models.Breakfast.BreakfastWT;
+import org.githiomi.tokitchen.models.LunchAndDinner.QuickBiteTypes;
 
-public class SandwichSpinner extends ArrayAdapter<String> {
+import java.util.List;
 
-    private String[] options;
+public class BreakfastVarietySpinner extends ArrayAdapter<BreakfastType> {
 
-    public SandwichSpinner(@NonNull Context context, String[] stringList) {
-        super(context, 0, stringList);
-
-        this.options = stringList;
+    public BreakfastVarietySpinner(@NonNull Context context, @NonNull List<BreakfastType> breakfastTypes) {
+        super(context, 0, breakfastTypes);
     }
 
     @NonNull
@@ -42,10 +43,10 @@ public class SandwichSpinner extends ArrayAdapter<String> {
 
         TextView sizeName = (TextView) convertView.findViewById(R.id.sizeName);
 
-        String option = options[position];
+        BreakfastType breakfastType = getItem(position);
 
-        if ( option != null ) {
-            sizeName.setText(option);
+        if ( breakfastType != null ) {
+            sizeName.setText(breakfastType.getTypeName());
         }
 
         return convertView;

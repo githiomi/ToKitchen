@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.githiomi.tokitchen.R;
+import org.githiomi.tokitchen.adapters.spinners.BreakfastVarietySpinner;
+import org.githiomi.tokitchen.models.Breakfast.BreakfastType;
 import org.githiomi.tokitchen.models.Breakfast.BreakfastWT;
 
 import java.util.List;
@@ -76,6 +78,13 @@ public class BreakfastWTAdapter extends RecyclerView.Adapter<BreakfastWTAdapter.
         private void bindToView(BreakfastWT breakfastWT){
 
             wBreakfastName.setText(breakfastWT.getBreakfastName());
+
+            // Extracting the types of meal from this item
+            List<BreakfastType> breakfastTypeList = breakfastWT.getBreakfastTypeList();
+
+            // Passing them to a spinner
+            BreakfastVarietySpinner spinner = new BreakfastVarietySpinner(context, breakfastTypeList);
+            wVarietyDropDown.setAdapter(spinner);
 
         }
 
